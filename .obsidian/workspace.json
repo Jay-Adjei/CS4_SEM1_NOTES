@@ -11,10 +11,14 @@
             "id": "d208c765ab92c969",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Lecture_Notes.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Lecture_Notes"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Lecture_Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Lecture_Notes"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Lecture_Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Lecture_Notes"
             }
           },
           {
@@ -136,12 +142,27 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Lecture_Notes.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Lecture_Notes"
+            }
+          },
+          {
+            "id": "fdeafd9bc1592a9d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ]
@@ -158,9 +179,22 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false
     }
   },
   "active": "d208c765ab92c969",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Lecture_Notes.md",
+    "Personal_Notes",
+    "Assignments/MAS_261",
+    "Assignments/CSM_497",
+    "Assignments/CSM_495",
+    "Assignments/CSM_491",
+    "Assignments/CSM_483",
+    "Assignments/CSM_481",
+    "Assignments/CSM_477",
+    "Courses/MAS_261",
+    "Courses/CSM_491"
+  ]
 }
