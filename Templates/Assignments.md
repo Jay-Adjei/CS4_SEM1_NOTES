@@ -1,9 +1,24 @@
+---
+course:
+date:
+status: Not Started
+tags: [assignment]
+---
 
-# Course
+# {{title}}
 
-# Question
+## Question
 
-# Reference
+-
 
-# Requirement
+## Refrences/Refferal Material
 
+-
+
+## Requirements
+
+-
+
+## Submission Details
+
+-
