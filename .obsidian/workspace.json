@@ -165,9 +165,19 @@
               "icon": "lucide-list",
               "title": "Outline of Software Process"
             }
+          },
+          {
+            "id": "fa501577ad29029e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -184,7 +194,8 @@
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
       "zk-prefixer:Create new unique note": false,
-      "workspaces:Manage workspace layouts": false
+      "workspaces:Manage workspace layouts": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "b66035aa7eeab775",
