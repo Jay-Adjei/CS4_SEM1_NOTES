@@ -1,9 +1,7 @@
 ---
 course:
 tags: []
-last topic:
-next topic: 
-note to self:
+covered: 
 ---
 
 {{date}} {{time}}
@@ -19,5 +17,13 @@ note to self:
 -
 
 ## Summary
+
+-
+
+## Questions
+
+-
+
+## Answers
 
 -

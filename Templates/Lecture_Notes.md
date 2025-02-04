@@ -1,9 +1,24 @@
+---
+course:
+tags: []
+---
+
 {{date}} {{time}}
 
-# Notes
+# {{title}}
 
-# Key Points
+## Notes
 
-# Questions
+-
 
-# Assignments
+## Key Points
+
+-
+
+## Questions
+
+-
+
+## Assignments
+
+-
