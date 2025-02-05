@@ -3,7 +3,7 @@ course:
   - CSM 495
 tags: 
 last topic/current topic: Software Process
-next topic: 
+next topic: Process Activities
 note to self:
 ---
 
@@ -25,6 +25,10 @@ note to self:
 
 ### Software Process Model
 -A software process model is a simplified representation of a software process.
+-Each [[process model]] represents a process from a particular perspective, and thus provides only partial information about that process. For example, a process activity model shows the activities and their sequence but may not show the roles of the people involved in these activities.
+- [[The waterfall model]]: This takes the fundamental process activities of specification, development, validation, and evolution and represents them as separate process phases such as requirements specification, software design, implementation, testing, and so on.
+- [[Incremental development]]: This approach interleaves the activities of specification, development, and validation. The system is developed as a series of versions (increments), with each version adding functionality to the previous version.
+- [[Reuse-oriented software engineering]]: This approach is based on the existence of a significant number of reusable components. The system development process focuses on integrating these components into a system rather than developing them from scratch.
 
 ## Key Points
 
@@ -32,6 +36,8 @@ note to self:
 -Business Systems -> require a less formal, flexible process in order to be effective.
 
 -Software processes can be improved by process standardization where the diversity in software processes across an organization is reduced.
+-General process models can also be called process paradigms
+-
 
 ## Summary
 
