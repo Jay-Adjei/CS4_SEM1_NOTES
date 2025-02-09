@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/Personal Timetable.md",
+                "file": "Personal_Notes/Fibre Optics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Personal Timetable"
+              "title": "Fibre Optics"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Personal_Notes/Personal Timetable.md",
+            "file": "Personal_Notes/Fibre Optics.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -173,14 +173,14 @@
   },
   "active": "7a57332c6ad1b1e1",
   "lastOpenFiles": [
-    "Personal_Notes/Fibre Optics.md",
-    "Personal_Notes/Personal Timetable.md",
-    "Tags/Half duplex.md",
-    "Tags/Full duplex.md",
-    "().md",
     "Attachments/20250207_102535.jpg",
     "Attachments/20250207_101611.jpg",
     "Attachments/20250207_100228.jpg",
+    "Personal_Notes/Personal Timetable.md",
+    "Personal_Notes/Fibre Optics.md",
+    "Tags/Half duplex.md",
+    "Tags/Full duplex.md",
+    "().md",
     "Personal_Notes/School/CSM 495 - Intro to software engineering/Software Process.md",
     "Tags/Incremental development.md",
     "Personal_Notes/School/Software Engineering.md",
