@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/Fibre Optics.md",
+                "file": "Personal_Notes/Personal Timetable.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fibre Optics"
+              "title": "Personal Timetable"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Personal_Notes/Fibre Optics.md",
+            "file": "Personal_Notes/Personal Timetable.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -173,8 +173,9 @@
   },
   "active": "7a57332c6ad1b1e1",
   "lastOpenFiles": [
-    "Tags/Half duplex.md",
     "Personal_Notes/Fibre Optics.md",
+    "Personal_Notes/Personal Timetable.md",
+    "Tags/Half duplex.md",
     "Tags/Full duplex.md",
     "().md",
     "Attachments/20250207_102535.jpg",
