@@ -39,12 +39,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Courses/CSM_495/Something.md",
+                "file": "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Something"
+              "title": "Intro To Data Communications"
             }
           }
         ],
@@ -187,6 +187,20 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "60ab816940e26549",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
           }
         ],
         "currentTab": 4
@@ -212,8 +226,12 @@
   },
   "active": "7f764a5762fac99f",
   "lastOpenFiles": [
-    "Attachments/incremental.png",
+    "Simplex Channel.md",
+    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
+    "Personal_Notes/Personal Timetable.md",
+    "Personal_Notes/School/CSM - Data Communications",
     "Courses/CSM_495/Something.md",
+    "Attachments/incremental.png",
     "Attachments/waterfall.png",
     "Attachments/reuse-oriented.png",
     "Personal_Notes/School/CSM 495 - Intro to software engineering/Software Process.md",
@@ -236,7 +254,6 @@
     "Personal_Notes/Untitled.md",
     "Personal_Notes",
     "Assignments/MAS_261",
-    "Assignments/CSM_497",
-    "Assignments/CSM_495"
+    "Assignments/CSM_497"
   ]
 }

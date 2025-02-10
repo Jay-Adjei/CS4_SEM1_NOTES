@@ -1,0 +1,1 @@
+A channel whose direction of transmission is 
