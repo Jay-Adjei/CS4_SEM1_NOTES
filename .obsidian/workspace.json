@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
+                "file": "Personal_Notes/Personal Timetable.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System Concepts"
+              "title": "Personal Timetable"
             }
           }
         ],
@@ -212,10 +212,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9f5ef6bcaae76c77",
+  "active": "7f764a5762fac99f",
   "lastOpenFiles": [
-    "Tags/Dynamic vs Static systems.md",
     "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
+    "Tags/Dynamic vs Static systems.md",
     "Tags/Continuous vs Discrete systems.md",
     "Tags/Integrated systems.md",
     "Tags/Natural & Artificial systems.md",
