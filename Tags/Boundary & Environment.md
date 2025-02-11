@@ -1,0 +1,6 @@
+- **Boundary**: Defines what belongs to the system and what does not. It marks the system’s limits of control and influence.
+- **Environment**: Everything outside the boundary that interacts with the system.
+    - Inputs come from the environment into the system.
+    - Outputs flow from the system to the environment.
+- Systems often interact with their environment and don’t exist in isolation.
+- The boundary can be physical or conceptual.

@@ -1,0 +1,2 @@
+- **Continuous Systems**: Allow inputs and outputs to vary by very small amounts.
+- **Discrete Systems**: Restrict inputs and outputs to specific, distinct values.

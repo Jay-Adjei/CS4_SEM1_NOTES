@@ -1,0 +1,1 @@
+Refers to the connections and interactions between subsystems. It acts as a communication path, and the number of interfaces increases with the number of subsystems.

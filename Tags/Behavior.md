@@ -1,0 +1,7 @@
+- **Behavior** is how a system reacts to its environment.
+- It is influenced by procedures designed to ensure components act to achieve the system's goals.
+- Example: Touching something hot triggers the nervous system to withdraw the body.
+    - Heat is the input.
+    - Reaction (withdrawal) is the behavior.
+    - Instructions from the nervous system are the procedure.
+- **Procedures** define what should happen, while **behavior** shows what actually happens.

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tags/Interrupt Service Routine (ISR).md",
+                "file": "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Interrupt Service Routine (ISR)"
+              "title": "System Concepts"
             }
           }
         ],
@@ -214,8 +214,28 @@
   },
   "active": "9f5ef6bcaae76c77",
   "lastOpenFiles": [
-    "Tags/interrupt handlers.md",
+    "Tags/Dynamic vs Static systems.md",
+    "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
+    "Tags/Continuous vs Discrete systems.md",
+    "Tags/Integrated systems.md",
+    "Tags/Natural & Artificial systems.md",
+    "Tags/Deterministic and Probabilistic.md",
+    "Tags/Closed and Open Systems.md",
+    "Tags/Conceptual & Physical system.md",
+    "Tags/Black Box.md",
+    "Tags/Feedback Control.md",
+    "Tags/Interface.md",
+    "Tags/Subsystem.md",
+    "Tags/Boundary & Environment.md",
+    "Tags/Life Cycle.md",
+    "Tags/Behavior.md",
+    "Tags/Goal.md",
+    "Tags/Interaction and Structure.md",
+    "Tags/Basic Components.md",
+    "Personal_Notes/School/CSM 495 - Intro to software engineering/Software Process.md",
+    "Personal_Notes/School/CSM 481 - Information Systems",
     "Tags/Interrupt Service Routine (ISR).md",
+    "Tags/interrupt handlers.md",
     "Tags/Interrupts.md",
     "Personal_Notes/School/CSM 483 - Operating Systems/Introduction.md",
     "Attachments/interrupt-drive cycle.png",
@@ -224,32 +244,18 @@
     "Tags/concurrently.md",
     "Templates/Lecture_Notes.md",
     "Attachments/incremental.png",
-    "Untitled.md",
-    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
     "Personal_Notes/School/CSM 483 - Operating Systems",
-    "Personal_Notes/Personal Timetable.md",
     "Personal_Notes/School/CSM - Data Communications",
-    "Courses/CSM_495/Something.md",
     "Attachments/waterfall.png",
     "Attachments/reuse-oriented.png",
-    "Personal_Notes/School/CSM 495 - Intro to software engineering/Software Process.md",
-    "Tags/Incremental development.md",
-    "Tags/Reuse-oriented software engineering.md",
     "Attachments/reuse-oriented.png",
-    "Tags/The waterfall model.md",
     "Attachments/waterfall 1.png",
-    "Tags/process model.md",
     "Downloads/CS4_SEM1_NOTES",
     "Downloads",
     "Personal_Notes/School/CSM 495 - Intro to software engineering",
-    "Templates/Personal_Notes.md",
-    "Templates/Revision.md",
-    "Templates/Assignments.md",
     "Personal_Notes/School/Software Engineering",
     "Personal_Notes/School",
     "Untitled",
-    "Personal_Notes/Untitled.md",
-    "Personal_Notes",
-    "Assignments/MAS_261"
+    "Personal_Notes"
   ]
 }
