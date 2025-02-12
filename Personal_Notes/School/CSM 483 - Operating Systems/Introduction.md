@@ -3,7 +3,7 @@ course:
   - CSM 483
 tags: 
 last topic: I/O Structure
-next topic: I/O Structure (cont.)
+next topic: Storage Structure
 note to self:
 ---
 
