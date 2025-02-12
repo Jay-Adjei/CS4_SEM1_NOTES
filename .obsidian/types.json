@@ -5,6 +5,7 @@
     "tags": "tags",
     "date": "date",
     "course": "multitext",
-    "covered": "checkbox"
+    "covered": "checkbox",
+    "status": "text"
   }
 }

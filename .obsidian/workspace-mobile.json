@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/Personal Timetable.md",
-                "mode": "preview",
+                "file": "Personal_Notes/Hehehe.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Personal Timetable"
+              "title": "Hehehe"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Personal_Notes/Personal Timetable.md",
+            "file": "Templates/Personal_Notes.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -173,9 +173,13 @@
   },
   "active": "7a57332c6ad1b1e1",
   "lastOpenFiles": [
+    "Templates/Personal_Notes.md",
+    "Personal_Notes/Hehehe.md",
+    "Personal_Notes/Personal Timetable.md",
+    "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
+    "Templates/Lecture_Notes.md",
     "Personal_Notes/School/CSM 483 - Operating Systems/Introduction.md",
     "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
-    "Personal_Notes/Personal Timetable.md",
     "Personal_Notes/Fibre Optics.md",
     "Attachments/20250207_102535.jpg",
     "Attachments/20250207_101611.jpg",
