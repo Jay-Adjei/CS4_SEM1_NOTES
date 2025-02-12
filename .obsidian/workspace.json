@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
+                "file": "Tags/Interrupt Service Routine (ISR).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "System Concepts"
+              "title": "Interrupt Service Routine (ISR)"
             }
           }
         ],
@@ -212,28 +212,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9f5ef6bcaae76c77",
+  "active": "7f764a5762fac99f",
   "lastOpenFiles": [
-    "Tags/Dynamic vs Static systems.md",
-    "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
-    "Tags/Continuous vs Discrete systems.md",
-    "Tags/Integrated systems.md",
-    "Tags/Natural & Artificial systems.md",
-    "Tags/Deterministic and Probabilistic.md",
-    "Tags/Closed and Open Systems.md",
-    "Tags/Conceptual & Physical system.md",
-    "Tags/Black Box.md",
-    "Tags/Feedback Control.md",
-    "Tags/Interface.md",
-    "Tags/Subsystem.md",
-    "Tags/Boundary & Environment.md",
-    "Tags/Life Cycle.md",
-    "Tags/Behavior.md",
-    "Tags/Goal.md",
-    "Tags/Interaction and Structure.md",
-    "Tags/Basic Components.md",
-    "Personal_Notes/School/CSM 495 - Intro to software engineering/Software Process.md",
-    "Personal_Notes/School/CSM 481 - Information Systems",
+    "Tags/interrupt handlers.md",
     "Tags/Interrupt Service Routine (ISR).md",
     "Tags/interrupt handlers.md",
     "Tags/Interrupts.md",
