@@ -1,0 +1,4 @@
+- A key feature of a system is the interaction between its components.
+- A system is not just a group of elements; its components must work together. For example, in an organization, departments like purchasing, production, and inventory interact and depend on each other.
+- This interaction makes the system dynamic.
+- The relationships between components define the system’s **structure**, which separates it from its environment.

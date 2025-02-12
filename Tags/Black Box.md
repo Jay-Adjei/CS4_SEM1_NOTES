@@ -1,0 +1,1 @@
+A subsystem where inputs and outputs are known, but the process of transforming input into output is not defined or understood.

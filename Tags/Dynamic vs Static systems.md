@@ -1,0 +1,2 @@
+- **Dynamic Systems**: Have activities or processes occurring, often with multiple actions.
+- **Static Systems**: Have no activity or processes.
