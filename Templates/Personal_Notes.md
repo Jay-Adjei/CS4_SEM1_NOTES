@@ -1,6 +1,6 @@
 ---
 course:
-status: []
+status: Incomplete
 last topic:
 next topic: 
 note to self:
