@@ -1,0 +1,1 @@
+Knowledge engineering refers to the acquisition of knowledge from a human expert or other source and its coding in the expert system.

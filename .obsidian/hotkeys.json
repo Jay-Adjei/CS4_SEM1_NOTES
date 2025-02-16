@@ -7,5 +7,14 @@
       ],
       "key": "T"
     }
+  ],
+  "editor:table-col-align-center": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "C"
+    }
   ]
 }

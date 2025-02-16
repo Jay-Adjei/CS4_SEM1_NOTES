@@ -1,0 +1,1 @@
+A warrant is essentially a meta-explanation that explains the expert system's explanation of its reasoning.
