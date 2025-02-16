@@ -1,9 +1,8 @@
 ---
-course:
+course: 
 status: Incomplete
-last topic:
-next topic: 
-note to self:
+last topic: 
+next topic:
 ---
 
 {{date}} {{time}}
@@ -19,5 +18,9 @@ note to self:
 -
 
 ## Summary
+
+-
+
+## Questions
 
 -

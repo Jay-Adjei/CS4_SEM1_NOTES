@@ -2,9 +2,10 @@
 course:
   - CSM 483
 tags: 
-last topic: Storage Structure
-next topic: Storage Structure
-note to self:
+last topic: Serial Communications
+next topic: Kernel Data Structure
+note to self: 
+status: Completed
 ---
 
 2025-02-10 09:21
@@ -325,13 +326,397 @@ There are two ways to handle I/O operations:
     - **Device-driver interface**: Ensures compatibility and manages **specific hardware drivers**.
 
 ### **Protection and Security**
+1. **Protection**:
+    
+    - Mechanisms provided by the OS to **control access** to system resources.
+    - Ensures that processes and users interact with resources in an authorized way.
+2. **Security**:
+    
+    - Defense mechanisms to safeguard the system from **internal and external attacks**.
+    - Protects against threats like denial-of-service attacks, worms, viruses, identity theft, and unauthorized service access.
+3. **User and Access Control**:
+    
+    - **User ID (UID)**:
+        - Each user is assigned a unique identity (user ID) and associated security credentials.
+        - The user ID is linked to the user's files and processes to enforce access control.
+    - **Group ID (GID)**:
+        - Users can belong to a group identified by a group ID.
+        - Groups help manage permissions for a set of users, allowing collective access control for files and processes.
+4. **Privilege Escalation**:
+    
+    - A mechanism that allows a user to temporarily **gain additional rights or privileges** by switching to another effective ID.
+    - Used for administrative tasks but must be carefully controlled to avoid abuse.
 
+### **Virtualization**
+- **Definition**:
+    
+    - **Virtualization** allows one operating system (OS) to run applications or even other operating systems (**guest OSes**) within it. It is a significant and expanding industry.
+- **Emulation**:
+    
+    - Used when the source CPU architecture differs from the target CPU (e.g., running PowerPC software on an Intel x86 system).
+    - Emulation is typically **slow** because it translates instructions from one architecture to another.
+    - When programs are not compiled to native code, **interpretation** is used instead, further slowing execution.
+- **Virtualization**:
+    
+    - In contrast to emulation, virtualization assumes the **host and guest OSes** are natively compatible with the CPU.
+    - Example: Running multiple **Windows XP guest OSes** on a native Windows XP **host OS** using virtualization software like VMware.
+    - A **VMM (Virtual Machine Manager)** provides the necessary services to manage virtual machines.
+
+- **Use Cases for Virtualization**:
+    
+    - **Running multiple OSes**: A single machine can run multiple operating systems for testing, exploration, or compatibility.
+        - Example: An Apple laptop running **Mac OS X** as the host OS and **Windows** as a guest OS.
+    - **Developing cross-platform apps**: Developers can test applications on different OSes without needing multiple physical systems.
+    - **Quality Assurance**: Test applications across various OSes for reliability without maintaining multiple systems.
+    - **Data Center Management**: Manage and execute multiple computing environments within data centers efficiently.
+- **Virtual Machine Manager (VMM)**:
+    
+    - The **VMM** can run directly on hardware (natively), making it both the **host** and manager of virtual environments.
+    - Examples of native VMMs include **VMware ESX** and **Citrix XenServer**, which do not rely on a general-purpose host OS.
+
+### **Computing Environment Virtualization**
+![[computing environments - virtualization.png]]
+- **Non-Virtualized Environment (Diagram a)**:
+    
+    - In a traditional setup, processes interact directly with the **kernel**, which manages hardware resources like CPU, memory, and I/O devices.
+    - A **programming interface** bridges processes and the kernel, allowing applications to utilize system resources.
+- **Virtualized Environment (Diagram b)**:
+    
+    - The **Virtual Machine Manager (VMM)**, also known as a hypervisor, sits between the hardware and multiple virtual machines (VMs).
+    - Each **VM** operates independently, with its own **kernel** and **processes**, as if it were running on separate hardware.
+    - The VMM manages resource allocation and ensures isolation between VMs, enabling multiple operating systems to coexist on a single physical machine.
+
+### **Distributed Systems**
+- **Definition**:
+    
+    - A **distributed system** is a collection of separate systems (which may be heterogeneous) that are connected via a network.
+- **Network**:
+    
+    - The **network** serves as the communication path for the systems, with **TCP/IP** being the most common protocol.
+    - **LAN**: Small-scale (office/campus).
+    - **WAN**: Large-scale (connects LANs).
+    - **MAN**: City or regional coverage.
+    - **PAN**: Personal device connections.
+- **Network Operating System (NOS)**:
+    
+    - Provides features that allow systems to collaborate across the network.
+    - Key functionalities include:
+        - **Communication scheme**: Facilitates message exchange between systems.
+        - Creates the **illusion of a single system** by integrating resources seamlessly.
+
+### **Computer System Architecture**
+- **Single-Processor Systems**:
+    
+    - Most computer systems use a **single general-purpose processor** to execute tasks.
+    - Some systems also include **special-purpose processors** for specific tasks (e.g., graphics or network processing).
+- **Multiprocessor Systems**:
+    
+    - These systems are becoming increasingly common and are also called **parallel systems** or **tightly-coupled systems**.
+    - **Advantages**:
+        1. **Increased throughput**: More work can be done simultaneously.
+        2. **Economy of scale**: Shared resources reduce costs.
+        3. **Increased reliability**: Graceful degradation (if one processor fails, others can continue working) or fault tolerance.
+    - **Types of Multiprocessing**:
+        1. **Asymmetric Multiprocessing**:
+            - Each processor is assigned a specific task, and one processor may control others.
+        2. **Symmetric Multiprocessing**:
+            - All processors are treated equally, and each can perform all tasks.
+
+### **Symmetric Multiprocessing Architecture**
+
+![[symmetric multiprocessing architecture.png]]
+- **Architecture Overview**:
+    
+    - In **symmetric multiprocessing (SMP)**, two or more processors are connected to a shared **main memory** and operate under the same operating system.
+    - Each processor has its own **registers** and **cache** for storing temporary data and speeding up operations.
+- **Processor Design**:
+    
+    - All processors in the system are equal and can perform any task.
+    - They access **main memory** through a shared bus or connection, which allows them to collaborate and execute tasks efficiently.
+- **Advantages**:
+    
+    - **Equal responsibility**: No processor has a specific role; all processors can handle any task.
+    - **Resource sharing**: Shared memory allows communication and coordination between processors.
+
+#### **Dual-Core Design**
+![[Dual-Core Design.png]]
+- **Dual-Core and Multicore Design**:
+    
+    - **Dual-core** refers to a single processor containing **two CPU cores** on the same chip.
+    - Each core operates independently, with its own **registers** and **L1 cache** (Level 1 cache).
+- **Cache Hierarchy**:
+    
+    - Both cores share a larger **L2 cache** (Level 2 cache), which acts as a bridge between the cores and the **main memory**.
+    - This shared cache allows efficient communication and data access between cores.
+- **System Design**:
+    
+    - Dual-core processors are part of **multicore systems**, where multiple chips or cores are integrated into a single system.
+    - These systems can also include **chassis-based designs** that house multiple separate systems for scalability.
+
+### **Non-Uniform Memory Access System**
+![[NUMA.png]]
+- **Definition of NUMA**:
+    
+    - In **Non-Uniform Memory Access (NUMA)** systems, each CPU has its own **local memory** that it can access faster than the memory connected to other CPUs.
+    - CPUs are connected through an **interconnect network**, allowing them to access both local and remote memory.
+- **Memory Access Characteristics**:
+    
+    - Accessing **local memory** (e.g., memory₀ for CPU₀) is faster because it is directly connected to the CPU.
+    - Accessing **remote memory** (e.g., CPU₀ accessing memory₁) is slower because it involves the interconnect.
+- **Advantages**:
+    
+    - NUMA improves **scalability** by allowing memory to be distributed across CPUs.
+    - Reduces contention and bottlenecks associated with shared memory systems.
+- **Use Cases**:
+    
+    - Commonly used in high-performance computing and [[systems requiring large-scale parallel processing]].
+
+### **Clustered Systems**
+- **Definition**:
+    
+    - Clustered systems involve multiple systems working together, similar to multiprocessor systems but using separate machines.
+    - These systems often share storage via a **Storage Area Network (SAN)**.
+- **High Availability**:
+    
+    - Clustered systems provide **high-availability services** that continue to operate even if one machine fails.
+- **Types of Clustering**:
+    
+    - **Asymmetric Clustering**:
+        - One machine is in **hot-standby mode**, ready to take over in case another machine fails.
+    - **Symmetric Clustering**:
+        - Multiple nodes run applications simultaneously and monitor each other for faults.
+- **High-Performance Computing (HPC)**:
+    
+    - Some clusters are used for **HPC**, requiring applications to be designed with **parallelization** in mind for maximum performance.
+- **Distributed Lock Manager (DLM)**:
+    
+    - Some clusters use a **DLM** to manage and prevent conflicting operations when multiple nodes access shared resources.
+
+![[clustered systems.png]]
+- **Components**:
+    
+    - **Multiple computers** are connected via an **interconnect network**.
+    - These computers share access to a **Storage Area Network (SAN)**, which acts as centralized storage.
+- **Operation**:
+    
+    - The **interconnect** allows the computers to communicate and coordinate tasks.
+    - The **SAN** provides a shared storage resource that all computers can access simultaneously.
+- **Purpose**:
+    
+    - This setup supports **high availability**, ensuring that if one computer fails, others can take over.
+    - It also supports **parallel processing** in high-performance computing environments.
+
+### **Computer Systems Environments**
+### **Traditional Computing**
+
+- **Description**:
+    - General-purpose stand-alone machines (e.g., desktops, laptops).
+    - Increasingly interconnected via the **Internet** and **wireless networks**.
+- **Key Features**:
+    - Use **portals** for accessing internal systems.
+    - **Thin clients** serve as lightweight terminals for web-based applications.
+    - **Firewalls** protect home systems from Internet attacks.
+
+---
+
+### **2. Mobile Computing**
+
+- **Description**:
+    - Includes **smartphones**, **tablets**, and similar handheld devices.
+- **Key Features**:
+    - Differ from traditional computers with added sensors like **GPS** and **gyroscopes**.
+    - Enable apps for **augmented reality**.
+    - Use **Wi-Fi** (IEEE 802.11) or **cellular networks** for connectivity.
+    - Leaders: **Apple iOS** and **Google Android**.
+
+---
+
+### **3. Client-Server Computing**
+
+- **Description**:
+    - **Clients** (desktops, laptops, smartphones) request services from **servers**.
+- **Key Features**:
+    - **Compute-server systems**: Handle service requests (e.g., databases).
+    - **File-server systems**: Manage file storage and retrieval.
+- **Architecture**:
+    - A network connects clients to the server.
+
+---
+
+### **4. Peer-to-Peer (P2P) Computing**
+
+- **Description**:
+    - A distributed system where all nodes are **peers**, with no distinction between clients and servers.
+- **Key Features**:
+    - Peers can act as both clients and servers.
+    - Use a **discovery protocol** to locate services.
+    - Examples: **Napster**, **Skype** (VoIP).
+
+---
+
+### **5. Cloud Computing**
+
+- **Description**:
+    - Provides **computing, storage, and apps as a service** via a network.
+- **Key Features**:
+    - Based on **virtualization**.
+    - Example: **Amazon EC2** offers servers, virtual machines, and scalable storage.
+- **Types of Cloud**:
+    - **Public Cloud**: Accessible to anyone for a fee.
+    - **Private Cloud**: Dedicated to a single organization.
+    - **Hybrid Cloud**: Combination of public and private.
+- **Service Models**:
+    - **SaaS**: Software as a service (e.g., Google Docs).
+    - **PaaS**: Platform as a service (e.g., app development environments).
+    - **IaaS**: Infrastructure as a service (e.g., servers, storage).
+
+---
+
+### **6. Real-Time Embedded Systems**
+
+- **Description**:
+    - **Special-purpose systems** with strict timing constraints, often without traditional OSes.
+- **Key Features**:
+    - Perform specific tasks within fixed deadlines.
+    - Use cases include medical devices, industrial robots, and automotive systems.
+
+### **Free and Open-Source Operating Systems**
+- **Definition**:
+    
+    - Open-source operating systems are distributed in **source-code format**, unlike **closed-source** or **proprietary** software, which is distributed as binaries.
+- **Philosophy**:
+    
+    - Open-source counters **Digital Rights Management (DRM)** and **copy protection** restrictions in proprietary software.
+    - It is supported by organizations like the **Free Software Foundation (FSF)**, which promotes freedom for users to run, study, share, and modify software under the **GNU Public License (GPL)**.
+- **Examples**:
+    
+    - Popular open-source operating systems include:
+        - **GNU/Linux**.
+        - **BSD UNIX** (forms the core of **Mac OS X**).
+    - These systems allow users to customize and use them freely.
+- **Tools for Exploration**:
+    
+    - Open-source virtualization tools like:
+        - **VMware Player** (free for Windows).
+        - **VirtualBox** (free and open-source, available on many platforms).
+    - These tools enable users to explore guest operating systems on their machines.
+
+### **Kernel Data Structures**
+- **Linked Lists**:
+    
+    - **Singly Linked List**: Each node points to the next node, with the last node pointing to `null`.
+    - **Doubly Linked List**: Each node has pointers to both the next and previous nodes, allowing bidirectional traversal.
+    - **Circular Linked List**: Similar to a singly linked list but the last node points back to the first, forming a loop.
+- **Binary Search Tree**:
+    
+    - A tree where each node has a left child (smaller value) and a right child (greater value).
+    - **Search Performance**:
+        - Unbalanced tree: O(n).
+        - Balanced tree (e.g., AVL, Red-Black Tree): O(log n).
+- **Hash Maps**:
+    
+    - Created using **hash functions**, which map keys to values for quick lookup.
+    - Hash functions ensure efficient data retrieval in constant time O(1) on average.
+- **Bitmap**:
+    
+    - A **bitmap** is a string of `n` binary digits representing the status of `n` items.
+    - Used in the kernel to efficiently manage resources (e.g., free or used memory blocks).
+- **Kernel-Specific Data Structures**:
+    
+    - In Linux, these are defined in include files like:
+        - `<linux/list.h>` for linked lists.
+        - `<linux/rbtree.h>` for red-black trees.
+        - `<linux/kfifo.h>` for FIFO buffers.
 
 ## Key Points
 - Operating system is resource allocator and a control program making efficient use of hardware, and managing execution of user programs.
 - The one program that runs at all times is the **kernel**, everything else is either a system program or an application program.
 - OSes also include **middleware**, this is a set software frameworks that provide additional services to application developers such as databases, multimedia, and graphics.
-
+- **Operating System Overview**:
+    
+    - Acts as an intermediary between users and computer hardware.
+    - Goals: Efficient hardware usage, convenience, and user problem-solving.
+- **Computer System Architecture**:
+    
+    - Components: Hardware, OS, application programs, users.
+    - Interaction: Users -> Applications -> OS -> Hardware.
+- **System Organization**:
+    
+    - Key components: CPU, memory, device controllers, and system bus.
+    - Concurrency and interrupts improve efficiency and multitasking.
+- **Interrupt Handling**:
+    
+    - CPU saves state, identifies interrupt type, and executes specific actions.
+- **I/O Structures**:
+    
+    - **Synchronous I/O**: Waits for completion.
+    - **Asynchronous I/O**: Continues execution while waiting for I/O.
+- **Storage Hierarchy**:
+    
+    - Organized by speed, cost, and volatility.
+    - Main memory is volatile, secondary storage is non-volatile.
+- **Process and Memory Management**:
+    
+    - OS manages resources for processes and optimizes memory allocation.
+- **File and Mass Storage Management**:
+    
+    - OS organizes files, directories, and manages storage for efficiency.
+- **Virtualization**:
+    
+    - Allows multiple OSes to run on one system using virtual machines.
+- **Computing Environments**:
+    
+    - Includes traditional, mobile, client-server, peer-to-peer, cloud, and real-time embedded systems.
+- **Open-Source Operating Systems**:
+    
+    - Available in source-code form, allowing freedom to modify and use.
+- **Kernel Data Structures**:
+    
+    - Includes linked lists, binary search trees, hash maps, and bitmaps for efficient system resource management.
 ## Summary
+An **Operating System (OS)** acts as a bridge between users and computer hardware, enabling efficient resource utilization, ease of use, and solving user problems. It manages hardware (CPU, memory, I/O devices), facilitates process execution, and optimizes system performance through features like **interrupt handling**, **I/O structures**, and **storage management**.
 
--
+The **system architecture** includes hardware (resources), the OS (controller), application programs (problem solvers), and users. Key components like the **CPU**, **memory**, and **device controllers** are interconnected via a **system bus**, allowing concurrent operations.
+
+**Interrupt handling** ensures efficiency by saving the CPU state, identifying the interrupt type, and executing specific actions. For I/O, **synchronous I/O** waits for completion, while **asynchronous I/O** allows processes to continue execution, leveraging device drivers and status tables.
+
+**Storage hierarchy** organizes data by speed, cost, and volatility. Main memory (volatile) provides quick access, while secondary storage (non-volatile) offers long-term data retention. Techniques like **caching** copy frequently accessed data to faster storage for better performance.
+
+**Process management** involves allocating resources (CPU, memory, I/O) to active programs and achieving concurrency through scheduling and synchronization. **Memory management** tracks memory usage, decides process allocation, and dynamically adjusts memory as needed. The **file system** abstracts physical storage into logical units, managing files, directories, and access control.
+
+Modern systems support **computing environments** like traditional desktops, mobile devices (smartphones/tablets), client-server models, peer-to-peer networks, cloud computing (e.g., Amazon EC2), and real-time embedded systems (e.g., medical devices). **Virtualization** allows multiple OSes to run on one system via virtual machines, enabling efficient resource use and testing.
+
+**Kernel data structures** like linked lists, binary search trees, hash maps, and bitmaps efficiently manage system resources. Open-source OSes (e.g., Linux, BSD UNIX) provide flexibility and customization, supported by tools like **VirtualBox** for experimentation.
+
+## Questions
+- **Operating Systems**:
+    
+    - What are the primary goals of an operating system?
+    - How does the OS act as an intermediary between the user and hardware?
+- **Interrupts**:
+    
+    - What is the purpose of interrupts in improving system efficiency?
+    - How does the CPU handle interrupts during execution?
+- **I/O Structures**:
+    
+    - What is the difference between synchronous and asynchronous I/O operations?
+- **Storage Management**:
+    
+    - How is storage organized in a hierarchy based on speed, cost, and volatility?
+    - Why is secondary memory essential in modern computing?
+- **Virtualization**:
+    
+    - How does virtualization differ from emulation?
+    - What are the key use cases for virtualization in computing environments?
+- **Kernel Data Structures**:
+    
+    - Why are linked lists, binary search trees, and hash maps important in kernel design?
+    - How does a bitmap help in resource management?
+- **Computing Environments**:
+    
+    - What are the main differences between client-server and peer-to-peer models?
+    - How does cloud computing leverage virtualization for scalability?
+- **Open-Source OS**:
+    
+    - What advantages do open-source operating systems offer compared to proprietary ones?
+    - What are examples of tools used to explore open-source OSes?
