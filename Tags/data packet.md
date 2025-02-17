@@ -1,0 +1,1 @@
+A **packet** is a **small unit of data** that is transmitted over a network or communication system. It consists of both **control information** (like headers and error-checking bits) and **actual data (payload).**

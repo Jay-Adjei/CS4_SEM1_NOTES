@@ -1,0 +1,1 @@
+Manchester coding solves NRZ’s synchronization issues by ensuring **at least one voltage transition per bit**. It combines **clock and data signals** into a single self-timed signal.

@@ -1,0 +1,1 @@
+Number of information bits per second.

@@ -1,0 +1,1 @@
+NRZ is a basic method of encoding digital signals for transmission. It represents **binary 0s and 1s** as different voltage levels without a return to a neutral state.

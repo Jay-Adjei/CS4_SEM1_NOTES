@@ -1,0 +1,16 @@
+## **Data Communications**
+- [x] Introduction to data communications
+- [x] Transmission media
+- [x] Baud  Rate
+- [x] Channel  Efficiency
+- [x] Data  Rate
+- [x] Manchester coding
+- [x] Asynchronous and Synchronous Transmission
+- [x] Data Packet
+- [ ] Parity and  Checksum
+- [ ] Data  Compression
+- [ ] Data Encryption
+- [ ] Data storage  Technology
+- [ ] Data Transfer in Data Digital Circuit
+- [ ] Cabling
+- [ ] Optical Fibre
