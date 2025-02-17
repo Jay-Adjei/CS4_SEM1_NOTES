@@ -2,9 +2,9 @@
 course:
   - CSM 477
 tags: 
-last topic: Transmission Media
-next topic: Transmission Media
-note to self: 
+last topic: Data Storage Technology
+next topic: Data Transfer in Digital Circuits
+note to self: Pg. 55
 status: Incomplete
 ---
 
@@ -117,7 +117,7 @@ A pathway over which information can be conveyed.
 
 #### **2. Purpose of Short Packet Length in Asynchronous Systems**
 
-- Short packets prevent **timing drift** between the sender and receiver.
+- Short packets prevent **[[timing drift]]** between the sender and receiver.
 - **High-quality oscillators**(such crystal oscillators) keep synchronization stable over **11-bit periods**.
 - Each **new start bit resets synchronization**, allowing **flexible pauses between packets**.
 
@@ -131,6 +131,219 @@ A pathway over which information can be conveyed.
 - Asynchronous transmission relies on **start and stop bits** for synchronization.
 - **Short packets prevent timing errors** in systems with separate oscillators.
 - The **EIA232 standard** governs hardware but not specific asynchronous protocols.
+
+### **Parity and checksums**
+#### **What is a Parity Bit?**
+
+- A **parity bit** is an **extra bit added to a binary data transmission** for **error detection**.
+- It helps check if the number of `1`s in the data is **even or odd**.
+- Used in **serial communication, memory storage, and networking** to detect errors.
+
+#### **2. Types of Parity:**
+
+- **[[Even Parity]]:** Ensures the **total number of 1s** (including the parity bit) is **even**.
+- **[[Odd Parity]]:** Ensures the **total number of 1s** (including the parity bit) is **odd**.
+
+#### **3. How Parity Works:**
+
+- **Sender calculates the parity bit** based on the data and appends it.
+- **Receiver recalculates parity** upon arrival and compares it with the received parity bit.
+- If the parity doesn’t match, **an error is detected**.
+
+#### **Steps to Calculate Even and Odd Parity**
+
+##### **General Rules:**
+
+1. **Count the number of 1s** in the data bits.
+2. **For Even Parity** → Add a parity bit to make the total **even**.
+3. **For Odd Parity** → Add a parity bit to make the total **odd**.
+4. **Attach the parity bit** at the end of the data.
+
+#### **4. Other Types of Parity:**
+
+- **None (No parity bit used)** – The system does not generate or check a parity bit.
+- **Space Parity:** Parity bit is always **0** (used as a filler).
+- **Mark Parity:** Parity bit is always **1** (also used as a filler).
+
+#### **5. Parity Check Limitations:**
+
+- **Detects single-bit errors** but **cannot fix errors**.
+- **Fails if an even number of bits are flipped** (e.g., `1010` → `1001` still has the same parity).
+- Works best in **small packet sizes**.
+
+#### **Final Takeaway:**
+
+- **Parity bits** provide a **simple way to detect errors** in communication.
+- **Even/Odd parity** ensures that data integrity is maintained in basic transmission.
+- **Limitations:** Parity cannot fix errors and fails if multiple bits change.
+
+#### **Checksum**
+#### **What is a Checksum?**
+
+- A **checksum** is a calculated **numeric value added to data packets** for **error detection**.
+- It is computed by **arithmetically adding** the values of all data packets.
+- The checksum ensures that the **sum of data + checksum = 0** for accurate transmission.
+
+---
+
+#### **2. How Checksum Works:**
+
+1. **Sender Side:**
+    
+    - Computes the **checksum value** by adding packet data.
+    - Appends the **checksum to the transmitted packet**.
+2. **Receiver Side:**
+    
+    - Recomputes the **sum of received data + checksum**.
+    - If the sum is **zero**, the data is assumed **correct**.
+    - If the sum is **nonzero**, an **error is detected**.
+
+---
+
+#### **3. Checksum Advantages:**
+
+✔ **Detects errors in data transmission.**  
+✔ **Simple mathematical operation** (fast computation).  
+✔ Used in **networking (TCP/IP, UDP), storage (RAID), and file integrity checks**.
+
+---
+
+#### **4. Error Correction (Beyond Detection)**
+
+- Errors **can be corrected** if additional **error-correcting codes (ECC)** are added.
+- This is useful when:
+    - **Retransmission is not possible** (e.g., deep-space communication).
+    - The **error probability is high** (e.g., noisy channels).
+- **Downside:** Error correction **reduces channel efficiency** by increasing overhead, and there is noticeable drop in [[channel throughput]].
+
+#### **Steps**
+| **Step**   | **Action**                                                                    |
+| ---------- | ----------------------------------------------------------------------------- |
+| **Step 1** | Divide data into fixed-size blocks (e.g., 8-bit).                             |
+| **Step 2** | Add all blocks together using **binary addition**.                            |
+| **Step 3** | If sum exceeds block size, **truncate it**.                                   |
+| **Step 4** | Compute **one’s complement** of the sum (flip first 6 bits).                  |
+| **Step 5** | **Send data + checksum** to the receiver.                                     |
+| **Step 6** | Receiver **adds received data + checksum** and checks if the sum is **zero**. |
+| **Step 7** | If the sum is NOT zero, **error detected** → Request retransmission.          |
+
+### **Data Compression**
+#### **What is Data Compression?**
+
+- Data compression **reduces the size of data** for transmission or storage.
+- It assigns **shorter codes to frequently used characters** and **longer codes to rarely used ones**.
+
+---
+
+#### **2. Benefits of Compression**
+
+✔ **Reduces the total data sent** without losing information.  
+✔ **Faster transmission times** and lower storage requirements.  
+✔ **Up to 50% or more savings** in data size.
+
+---
+
+#### **3. Types of Data Compression**
+
+- **Text Compression:** Assigns **shorter binary codes** to common characters.
+- **Image Compression:** Reduces repetitive patterns (e.g., **Run-Length Encoding, JPEG**).
+- **Program Compression:** Software and executables typically **compress less (15-20%)** than images.
+
+---
+
+#### **4. Huffman Coding (Example of Lossless Compression)**
+
+- Used in **fax transmission, data communications, and file compression**.
+- Works by **assigning short codes** to common symbols and **longer codes** to rare ones.
+- Example: Instead of **sending each white pixel separately**, **one code** represents **1000 white pixels** in a row.
+
+---
+
+#### **5. When Compression is Less Effective**
+
+- If data is already random (e.g., **randomly distributed black ink on white paper**), compression **won’t work well**.
+- Best used where **patterns and repetition exist**.
+
+---
+
+### **Final Takeaway:**
+
+- **Data compression saves bandwidth and storage**.
+- **Huffman coding** is widely used for efficient encoding.
+- **Compression efficiency depends on data type** (e.g., images compress better than programs)
+
+### **Data Encryption**
+#### **What is Data Encryption?**
+
+- **Encryption** secures communication by **scrambling data** into an unreadable format.
+- Only **authorized receivers** can decode and restore the original message.
+
+---
+
+#### **2. Why is Encryption Important?**
+
+✔ **Prevents unauthorized access** (protects privacy).  
+✔ **Secures digitized conversations** (e.g., phone calls, emails, fax).  
+✔ **Protects data from interception** over networks.
+
+---
+
+#### **3. How Encryption Works**
+
+1. **Data is converted into an unreadable format (ciphertext).**
+2. **Only devices with the correct decryption key can restore the message.**
+3. **Unauthorized interception results in scrambled, unreadable data.**
+
+---
+
+#### **4. Implementation of Encryption**
+
+- **Built-in circuits** in communication devices perform encryption automatically.
+- **[[External circuits]]** allow portable encryption/decryption.
+- **Encryption can be hardware-based or software-based** depending on the system.
+
+---
+
+### **Final Takeaways**
+
+- **Encryption ensures secure communication** in data transmission.
+- **Only authorized users can decrypt messages.**
+- **Used in banking, military, email security, and secure messaging apps.**
+
+Details on data encryption -> [[In depth data encryption]]
+
+### **Data Storage Technique**
+#### **Relationship Between Communication and Storage**
+
+- **Communication technology** is usually associated with **real-time data exchange** between distant devices.
+- However, **many communication techniques** (like error correction and signal processing) are also **used in data storage** to ensure accurate data retrieval.
+
+---
+
+#### **2. Error Correction in Data Storage**
+
+- **Error-correcting codes (ECC)** used in communication (to handle noise) are also used in **data storage**.
+- These techniques **detect and correct errors** when reading digital data from storage media.
+
+---
+
+#### **3. Applications of Error Correction in Storage**
+
+✅ **Compact Discs (CDs) & CD-ROMs:**
+
+- Use **Reed-Solomon Error Correction (RS ECC)** to correct data errors from scratches or dust.  
+    ✅ **Hard Drives (HDDs) & Solid-State Drives (SSDs):**
+- Use **ECC algorithms** to ensure correct data retrieval.  
+    ✅ **Tape Backup Systems:**
+- Store large amounts of data and use **error-correcting codes** to ensure long-term accuracy.
+
+---
+
+### **Final Takeaways**
+
+✔ **Data communication and data storage share similar error-handling techniques.**  
+✔ **Error correction ensures reliable data retrieval from storage media.**  
+✔ **CDs, hard drives, and tape backups all use ECC to prevent data loss.**
 
 ## Key Points
 - **Rule:** The maximum permissible transmission rate of  a message is directly proportional to signal power and inversely proportional to channel noise.

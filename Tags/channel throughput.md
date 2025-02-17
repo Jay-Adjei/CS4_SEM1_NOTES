@@ -1,0 +1,1 @@
+**Channel throughput** refers to the **actual amount of data successfully transmitted over a communication channel per unit of time**. It is measured in **bits per second (bps), kilobits per second (Kbps), megabits per second (Mbps), or gigabits per second (Gbps).**
