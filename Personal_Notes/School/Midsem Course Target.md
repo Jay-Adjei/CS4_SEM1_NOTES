@@ -7,13 +7,13 @@
 - [x] Manchester coding
 - [x] Asynchronous and Synchronous Transmission
 - [x] Data Packet
-- [ ] Parity and  Checksum
-- [ ] Data  Compression
-- [ ] Data Encryption
-- [ ] Data storage  Technology
-- [ ] Data Transfer in Data Digital Circuit
-- [ ] Cabling
-- [ ] Optical Fibre
+- [x] Parity and  Checksum
+- [x] Data  Compression
+- [x] Data Encryption
+- [x] Data storage  Technology
+- [x] Data Transfer in Data Digital Circuit
+- [x] Cabling
+- [x] Optical Fibre
 
 ## **Expert Systems**
 - [x] introduction to Expert systems

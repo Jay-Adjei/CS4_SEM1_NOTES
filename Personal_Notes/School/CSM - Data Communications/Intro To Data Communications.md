@@ -2,9 +2,9 @@
 course:
   - CSM 477
 tags: 
-last topic: Data Storage Technology
-next topic: Data Transfer in Digital Circuits
-note to self: Pg. 55
+last topic: Optical Fibre
+next topic: Radio Transmission
+note to self: Try and cover the radio and satelite transmissions
 status: Incomplete
 ---
 
@@ -344,6 +344,368 @@ Details on data encryption -> [[In depth data encryption]]
 ✔ **Data communication and data storage share similar error-handling techniques.**  
 ✔ **Error correction ensures reliable data retrieval from storage media.**  
 ✔ **CDs, hard drives, and tape backups all use ECC to prevent data loss.**
+
+### **Data Transfer in Digital Circuits**
+#### **How Data is Transferred in Digital Circuits**
+
+- Data is grouped into **packets of 8, 16, or 32 bits** and stored in **registers** (temporary holding units).
+- Each **bit in a register** is transferred in **parallel** through separate conductors.
+
+---
+
+#### **2. Role of Buses in Data Transfer**
+
+- A **bus** is a channel of **parallel wires** that connects different registers.
+- The **source register** sends data through **output conductors** to the bus.
+- The **destination register** receives data via **input conductors**.
+
+---
+
+#### **3. Behavior of Registers During Data Transfer**
+
+- After transmission, the **destination register contains the same data as the source register**.
+- The **source register is not erased** after transfer.
+
+---
+
+#### **4. Controlling Data Flow with Switches**
+
+- **Transmit switches** allow data from the source register to enter the bus.
+- **Receive switches** allow data to be captured by the destination register.
+- A **central control unit** manages these switches to avoid conflicts.
+
+---
+
+#### **5. Bus Contention & Conflict Prevention**
+
+- **Bus contention** occurs when **multiple sources attempt to transmit simultaneously**, causing electrical conflicts.
+- **If not controlled, contention can cause data loss or damage circuitry**.
+- To prevent contention:
+    - Only **one source register** transmits at a time.
+    - A **central control unit** ensures orderly data flow.
+
+---
+
+#### **6. Microprocessor Bus Characteristics**
+
+- Data buses in a **microprocessor** are **half-duplex** (data flows in one direction at a time).
+- **Proper circuit design** prevents bus contention.
+
+---
+
+#### **Final Takeaways**
+
+✔ **Data transfer between registers occurs through buses using switches.**  
+✔ **A central control unit ensures only one source transmits at a time.**  
+✔ **Bus contention can cause conflicts and must be prevented.**  
+✔ **Microprocessors use half-duplex buses for controlled data flow.**
+
+#### **Transmission Over Short Distances**
+##### **Data Transmission Within an Integrated Circuit (IC)**
+
+- When **source and destination registers** are within the **same microprocessor chip**, data transfer occurs over **very short distances** (thousandths of an inch).
+- **Advantages of short-distance transmission:**
+    - **Low power signals** are sufficient.
+    - **Minimal delay** since data travels a very short distance.
+    - **Less noise and distortion**, ensuring accurate transmission.
+
+---
+
+##### **2. Limitations of a Single Chip**
+
+- Although **integrating all computing functions on one chip** would be ideal, it’s **not yet possible** to fit the CPU, memory, disk controllers, display drivers, etc., on a single IC.
+
+---
+
+##### **3. Data Transmission Between ICs ("Off-Chip" Communication)**
+
+- When data moves **outside the chip**, signals must be **amplified** to maintain strength.
+- **Conductors extend out of the chip** through **external pins**, allowing communication with other ICs.
+
+---
+
+##### **4. Bus Transmission Over Circuit Boards**
+
+- Signals from microprocessor chips can travel up to **one foot on a printed circuit board (PCB)**.
+- If more devices are connected, **signal strength weakens**.
+- **Buffer circuits** can **boost signal strength** for longer distances or multiple connections (e.g., memory chips).
+
+---
+
+##### **Final Takeaways**
+
+✔ **Short-distance communication within an IC is efficient due to minimal power use and noise.**  
+✔ **Longer-distance data transfer (between ICs) requires amplification and external connectors.**  
+✔ **Bus signals on PCBs may need buffer circuits for extended transmission.**
+
+#### **Noise and Electrical Distortion**
+##### **Why Noise and Distortion Occur**
+
+- **High switching rates** and **low signal strength** in data, address, and control buses make them **prone to noise**.
+- Extending buses **beyond circuit boards** can create **serious issues** due to external interference.
+
+---
+
+##### **2. How Conductors Pick Up Noise**
+
+- Long conductors in **printed circuit boards (PCBs) or cables** can act as **antennas**, picking up noise from:
+    
+    - **Motors**
+    - **Switches**
+    - **Electronic circuits**
+- This **induces unwanted currents** in the signal conductors.
+    
+
+---
+
+##### **3. Impact of Noise on Digital Circuits**
+
+- Noise can **increase error rates** as conductor lengths increase.
+- A **single bit error** in an instruction code (e.g., from memory to a microprocessor) can introduce **invalid instructions**, causing system failures.
+
+---
+
+##### **4. Electrical Signal Distortion**
+
+- Signals can **change shape** as they travel through metallic conductors.
+    
+- A **clean rectangular pulse** may arrive as a **rounded or distorted waveform** due to:
+    
+    - **Capacitance effects**
+    - **Inductance in copper cables**
+    - **Long transmission distances**
+- This leads to **ringing effects** at the rising and falling edges of pulses.
+    
+
+---
+
+##### **5. Solutions to Noise and Distortion**
+
+1. **Increase Signal Power** → Helps signals remain strong over long distances.
+2. **Reduce Transmission Rate** → Slower switching reduces distortion.
+3. **Use Special Amplifier Circuits** → Amplifiers **boost** weak signals.
+4. **Use Noise Margins** → Ensure voltage levels remain within valid logic '1' and '0' thresholds.
+
+---
+
+##### **6. Role of Noise Margin**
+
+- **[[Noise margin]]** is the difference between:
+    
+    - **Actual signal voltage**
+    - **Minimum required voltage for logic 1 or 0**(threshold voltage)
+- **A higher noise margin means better noise immunity.**
+    
+
+---
+
+##### **Final Takeaways**
+
+✔ **Conductors can pick up external noise, causing bit errors.**  
+✔ **Long cables distort signals, reducing accuracy.**  
+✔ **Amplifiers and noise margins help maintain signal integrity.**  
+✔ **Reducing transmission speed improves reliability over long distances.**
+
+#### **Transmission Over Medium Distances**
+##### **Why Medium-Distance Transmission is Needed**
+
+- Peripherals like **printers and scanners** cannot be placed inside a computer.
+- Using **long internal buses** to connect them introduces **noise and distortion**.
+- A better solution is **a bus interface circuit** that allows reliable communication.
+
+---
+
+##### **2. How Data is Transmitted to Peripherals**
+
+- A **bus interface circuit** is installed in the computer.
+- The interface includes:
+    - **A holding register** for peripheral data.
+    - **Timing and formatting circuitry** to organize data.
+    - **Signal amplifiers** to strengthen transmission.
+
+---
+
+##### **3. Steps in Data Transmission**
+
+1. The **microprocessor stores data** in the holding register.
+2. Data is **formatted and sent with error-detecting codes**.
+3. Signal power is **boosted before transmission** through the cable.
+4. These steps **prevent noise and distortion** from corrupting the data.
+
+---
+
+##### **4. Preventing Noise Exposure**
+
+- Only **necessary data** is sent to the peripheral.
+- This reduces **unwanted party-line transactions** on the internal bus.
+- Data can be sent in:
+    - **Byte-serial format** (multiple channels).
+    - **Bit-serial format** (single channel).
+
+---
+
+##### **5. Importance of Transmission Medium**
+
+- Data transmission depends on **medium characteristics**:
+    - **Metallic conductors** (cables).
+    - **Fiber optics** (light beams for high-speed data).
+    - **Wireless transmission** (electromagnetic waves).
+
+---
+
+##### **6. Signal Boosting Methods**
+
+- **Amplifiers** enhance analogue signals for long-distance transmission.
+- **Repeaters** are used for digital signals every **2-3 km** to restore data integrity.
+
+---
+
+##### **Final Takeaways**
+
+✔ **Internal buses are not suitable for long peripheral connections.**  
+✔ **Bus interface circuits format, amplify, and transmit data efficiently.**  
+✔ **Byte-serial and bit-serial formats enable flexible data transfer.**  
+✔ **Amplifiers and repeaters help maintain signal strength over distances.**
+
+### **Cabling**
+#### **Twisted Pair Cabling Basics**
+
+- Consists of **two wires twisted together** in pairs.
+- Each pair includes:
+    - **+ve (positive) data signal**
+    - **-ve (negative) data signal**
+- Twisting the wires **reduces noise interference**.
+
+---
+
+#### **2. How Twisted Pairs Reduce Noise**
+
+- Any noise affecting one wire also **affects the other**.
+- Since the wires are **180° out of phase**, noise **cancels out** at the receiver.
+- Best used in systems with **balanced transmission**.
+
+---
+
+#### **3. Types of Twisted Pair Cables**
+
+- **Unshielded Twisted Pair (UTP)**
+    
+    - **No shielding**, making it cheaper but more prone to interference.
+    - Used in **Ethernet (10BaseT) and Token Ring networks**.
+    - **Uses RJ45, RJ11 connectors**.
+    - **Typical impedance: 100 ohms**.
+- **Shielded Twisted Pair (STP)**
+    
+    - Has an **extra shielding layer** for better noise rejection.
+    - Common in **IBM Cabling Systems (ICS)**.
+
+---
+
+#### **4. Enhancing Noise Reduction**
+
+- **More twists per foot** = **Better noise cancellation**.
+- **Adding a shielding layer** further reduces interference.
+
+---
+
+#### **5. Other Cable Types**
+
+- **Coaxial Cable**
+    - Two conductors with an insulating layer between them.
+    - **Better shielding against external interference**.
+- **Optical Fiber**
+    - **Uses light signals** for data transmission.
+    - **Core** (refracts light), **Cladding** (reflects light), and **Jacket** (protection).
+    - Based on **total internal reflection (TIR)** to prevent signal loss.
+
+---
+
+#### **6. Light Behavior in Different Media**
+
+- **Light moves differently through materials (air, water, glass, etc.)**.
+- **Small angles of incidence → Reflection**.
+- **Large angles of incidence → Refraction (bending)**.
+- **Objects underwater appear displaced** due to refraction.
+
+---
+
+#### **7. Optical Fiber Transmission Principles**
+
+- **Uses light instead of electrical signals**.
+- **Total internal reflection (TIR)** keeps light within the fiber.
+- **Core refracts light, cladding reflects it back** to minimize loss.
+
+---
+
+#### **8. Optical Fiber Transmission Modes**
+
+- **Step Index Mode**
+    
+    - Large core, multiple reflections off the cladding.
+    - Causes **signal distortion** due to different light travel times.
+- **Graded Index Mode**
+    
+    - Gradual refractive index change bends light **back to the core**.
+    - Reduces signal distortion for better reception.
+- **Single Mode**
+    
+    - Very thin core (**9 microns**).
+    - **Light travels in a straight line**, minimizing distortion.
+    - **Best for long-distance transmission**, uses **laser sources**.
+
+---
+
+#### **9. Optical Fiber Specifications**
+
+- **Indoor Cables**
+    
+    - **LED light sources**.
+    - **Multimode transmission (~850nm wavelength)**.
+    - **Signal loss: 3.5 dB/km**.
+- **Outdoor Cables**
+    
+    - **Laser sources**.
+    - **Single-mode transmission (~1170nm wavelength)**.
+    - **Signal loss: 1 dB/km**.
+
+---
+
+#### **10. Advantages of Optical Fiber**
+
+✔ **High bandwidth** → Supports large data transmission.  
+✔ **Low signal loss** → Can transmit over long distances.  
+✔ **Immune to EMI/RFI** → No electromagnetic interference.  
+✔ **Highly secure** → Hard to tap into fiber optics.  
+✔ **Lightweight and compact** → Easier installation.
+
+---
+
+#### **11. Disadvantages of Optical Fiber**
+
+❌ **Fragile** → Susceptible to bending or vibration damage.  
+❌ **Difficult to splice** → Requires specialized tools.  
+❌ **High initial cost** → More expensive than copper for low-speed applications.
+
+---
+
+#### **12. Unguided Transmission Media**
+
+- **Transmits data through the air instead of cables**.
+- **Not bound to physical pathways**, classified by **wave propagation**.
+
+---
+
+#### **Final Takeaways**
+
+✔ **Twisted pair cabling cancels out noise through phase shifting.**  
+✔ **UTP is cheaper and common in Ethernet, while STP has better shielding.**  
+✔ **More twists per foot improve noise rejection.**  
+✔ **Coaxial cables offer better shielding, while optical fiber provides superior speed.**  
+✔ **Light follows total internal reflection in optical fibers to prevent signal loss.**  
+✔ **Three optical transmission modes: Step Index, Graded Index, and Single Mode.**  
+✔ **Single-mode fiber is best for long-distance, high-speed communication.**  
+✔ **Optical fibers are immune to EMI but fragile and costly.**  
+✔ **Unguided transmission transmits data wirelessly through the air.**
 
 ## Key Points
 - **Rule:** The maximum permissible transmission rate of  a message is directly proportional to signal power and inversely proportional to channel noise.

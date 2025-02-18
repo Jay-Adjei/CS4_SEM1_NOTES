@@ -1,0 +1,2 @@
+- The difference between the actual output voltage and the threshold value.
+- It represents the amount of noise voltage that can be added to the signal without creating an error.
