@@ -31,7 +31,7 @@
 
 ## **Information Systems**
 - [x] System Concept
-- [ ] Overview of information systems
+- [x] Overview of information systems
 - [ ] key system application in an organization
 - [ ] decision support in business
 - [ ] group decision support system
