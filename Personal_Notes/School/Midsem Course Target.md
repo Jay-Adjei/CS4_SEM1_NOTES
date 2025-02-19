@@ -54,7 +54,7 @@
 - [ ] Hamiltons circuits
 
 ## **Principles of management**
-- [ ] introduction to management
+- [x] introduction to management
 - [ ] global management
 - [ ] history of management
 - [ ] constraints and challenges of global managers

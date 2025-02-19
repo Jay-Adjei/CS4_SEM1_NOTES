@@ -9,21 +9,21 @@ next topic:
 
 # {{title}}
 
-## Detailed Notes
+## 📚Detailed Notes
 
 -
 
-## Key Terms
+## 🗝️ Key Terms
 
 -
-## Key Points
-
--
-
-## Summary
+## 💡 Key Points
 
 -
 
-## Questions
+## ✨ Summary
+
+-
+
+## ❓Review Questions
 
 -
