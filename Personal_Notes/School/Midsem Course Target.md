@@ -45,18 +45,18 @@
 - [x] connectivity graph
 - [x] disconnectivity graph
 - [x] cut vertices graph
-- [ ] tree
-- [ ] delete graph
-- [ ] connectivity 
-- [ ] connection and disconnected graph
-- [ ] euler graphs
-- [ ] operation of graphs
-- [ ] Hamiltons circuits
+- [x] tree
+- [x] delete graph
+- [x] connectivity 
+- [x] connection and disconnected graph
+- [x] euler graphs
+- [x] operation of graphs
+- [x] Hamiltons circuits
 
 ## **Principles of management**
 - [x] introduction to management
 - [ ] global management
-- [ ] history of management
+- [x] history of management
 - [ ] constraints and challenges of global managers
 
 ## **Software Engineering**
