@@ -56,7 +56,7 @@ To build an efficient and balanced system, understanding its elements isn't enou
 
 ### **Systems View and Systems Thinking**
 - Overview:
-    - The [[essence]] of systems theory is about viewing the world from a different perspective.
+    - The essence of systems theory is about viewing the world from a different perspective.
     - **Systems View**: Adopts the frameworks and terminology of systems theory, using analogies and testing system laws and theories for applicability.
 - **Importance of Systems View**:
     - A purely technical approach often overlooks the interrelation between problems and solutions.
