@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/Midsem Course Target.md",
+                "file": "Contingency Theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Midsem Course Target"
+              "title": "Contingency Theory"
             }
           }
         ]
@@ -112,7 +112,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Personal_Notes/Personal Timetable.md",
+            "file": "Contingency Theory.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -168,36 +168,43 @@
       "zk-prefixer:Create new unique note": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "voice:Voice": false
     }
   },
   "active": "7a57332c6ad1b1e1",
   "lastOpenFiles": [
-    "Personal_Notes/School/Midsem Timetable.md",
-    "Personal_Notes/Personal Timetable.md",
-    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
+    "Courses/MAS 261/Leadership.md",
+    "Contingency Theory.md",
+    "Tags/Managerial Grid.md",
+    "Tags/Behavioral Theory.md",
+    "Tags/Trait theories.md",
+    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
+    "Courses/MAS 261",
+    "Tags/data packet.md",
+    "Tags/bit rate.md",
     "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
+    "Tags/Life Cycle.md",
+    "Tags/Behavior.md",
+    "Tags/Goal.md",
+    "Tags/Interaction and Structure.md",
+    "Tags/Basic Components.md",
+    "Personal_Notes/School/Midsem Timetable.md",
+    "Personal_Notes/School/CSM 483 - Operating Systems/Introduction.md",
+    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
+    "Personal_Notes/School/CSM 497 - Expert Systems/Introduction.md",
+    "Tags/weights.md",
+    "Tags/backward chaining.md",
+    "Tags/forward chaining.md",
     "Personal_Notes/School/Midsem Course Target.md",
+    "Personal_Notes/Personal Timetable.md",
     "Courses/CSM_495/Lecture 6.md",
     "Courses/CSM_483",
-    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
-    "Personal_Notes/School/CSM 483 - Operating Systems/Introduction.md",
     "Personal_Notes/School/CSM 495 - Intro to software engineering/Software Process.md",
     "Tags/process model.md",
-    "Tags/Reuse-oriented software engineering.md",
-    "Tags/Incremental development.md",
-    "Tags/The waterfall model.md",
-    "Templates/Lecture_Notes.md",
-    "Templates/Personal_Notes.md",
-    "Personal_Notes/Hehehe.md",
-    "Personal_Notes/Fibre Optics.md",
     "Attachments/20250207_102535.jpg",
     "Attachments/20250207_101611.jpg",
     "Attachments/20250207_100228.jpg",
-    "Tags/Half duplex.md",
-    "Tags/Full duplex.md",
-    "().md",
-    "Personal_Notes/School/Software Engineering.md",
     "Personal_Notes/School/CSM 495 - Intro to software engineering"
   ]
 }

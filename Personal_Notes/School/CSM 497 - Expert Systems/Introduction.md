@@ -640,7 +640,7 @@ Artificial Neural Systems are a powerful tool for solving complex problems that 
     
     - **Brain Metaphor**:
         - ANS models computation based on brain-like processes rather than traditional digital computation.
-        - Emphasizes **learning by example** and adjusting **synaptic connections** (weights) between neurons during training.
+        - Emphasizes **learning by example** and adjusting **synaptic connections** ([[weights]]) between neurons during training.
     - **Neural Networks**:
         - Composed of interconnected **neurons (processing units)**.
         - Configured for specific applications like **pattern recognition**, **data classification**, and **forecasting**.
