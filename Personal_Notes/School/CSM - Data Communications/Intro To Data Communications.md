@@ -707,6 +707,43 @@ Details on data encryption -> [[In depth data encryption]]
 ✔ **Optical fibers are immune to EMI but fragile and costly.**  
 ✔ **Unguided transmission transmits data wirelessly through the air.**
 
+### **Radio Transmission**
+
+#### **Definition:**
+
+- The transmission of data using radio waves in free space, often used for communication without physical cables.
+
+#### **Function:**
+
+- Used for line-of-sight microwave transmission.
+- Provides an alternative where laying cables is difficult, such as linking buildings separated by roads.
+
+#### **Advantages:**
+
+- Supports high data rates over long distances, similar to coaxial cable systems.
+- Utilized in long-haul telecommunications as an alternative to fiber optic or coaxial cables.
+
+#### **Challenges:**
+
+- Terrestrial radio links are affected by electrical and atmospheric interference.
+- Unlike terrestrial links, satellite transmission avoids such disturbances as radio beams travel freely in space.
+
+#### **Technical Aspects:**
+
+- Uses parabolic dish antennas at UHF frequencies for high directionality.
+- Directivity depends on dish diameter and wavelength, affecting signal gain.
+- The range between two line-of-sight parabolic antennas is calculated as:  
+    **d = 7.14 (kh)¹/² km**, where:
+    - **h** = antenna height (km),
+    - **k** = factor for Earth's curvature (≈1.33).
+
+#### **Final Takeaways:**
+
+✔ Radio transmission enables wireless communication without cables.  
+✔ Microwave links support high-speed, long-distance data transfer.  
+✔ Terrestrial radio links face interference, unlike satellite transmission.  
+✔ Parabolic dish antennas ensure precise, high-directional transmission.
+
 ## Key Points
 - **Rule:** The maximum permissible transmission rate of  a message is directly proportional to signal power and inversely proportional to channel noise.
 - **Aim:** Provide the highest possible transmission rate at the lowest possible power with the least possible noise.

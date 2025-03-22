@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
+                "file": "Personal_Notes/School/Midsem Course Target.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overview Of Information Systems"
+              "title": "Midsem Course Target"
             }
           }
         ],
@@ -228,6 +228,18 @@
   },
   "active": "41c8e1dda8a15df8",
   "lastOpenFiles": [
+    "Personal_Notes/School/Midsem Timetable.md",
+    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
+    "Tags/EIA232.md",
+    "Tags/Noise margin.md",
+    "Noise  margin.md",
+    "Tags/channel throughput.md",
+    "Tags/timing drift.md",
+    "Tags/data packet.md",
+    "Tags/Biphase Manchester Coding.md",
+    "Tags/Non-Return-to-Zero (NRZ).md",
+    "Tags/latches.md",
+    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
     "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
     "Tags/Basic Components.md",
     "Tags/Deterministic and Probabilistic.md",
@@ -242,18 +254,6 @@
     "Tags/Continuous vs Discrete systems.md",
     "Tags/Integrated systems.md",
     "Tags/Natural & Artificial systems.md",
-    "Tags/Closed and Open Systems.md",
-    "Tags/Feedback Control.md",
-    "Tags/Boundary & Environment.md",
-    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
-    "Personal_Notes/School/CSM 483 - Operating Systems/Introduction.md",
-    "Untitled.md",
-    "Tags/Interrupts.md",
-    "Tags/Interrupt Service Routine (ISR).md",
-    "Tags/concurrently.md",
-    "Personal_Notes/School/CSM 483 - Operating Systems/Operating System Structures.md",
-    "Personal_Notes/School/CSM 483 - Operating Systems/CPU Scheduling.md",
-    "Personal_Notes/School/Midsem Timetable.md",
     "Personal_Notes/School/CSM 483 - Operating Systems/Untitled",
     "Attachments/c program.png",
     "Attachments/process in memory.png",
