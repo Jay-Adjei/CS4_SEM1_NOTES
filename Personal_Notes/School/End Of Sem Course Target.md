@@ -33,7 +33,7 @@
 - [x] System Concept
 - [x] Overview of information systems
 - [ ] key system application in an organization
-- [ ] decision support in business
+- [x] decision support in business
 - [ ] group decision support system
 - [ ] knowledge management systems
 - [ ] artificial intelligence 

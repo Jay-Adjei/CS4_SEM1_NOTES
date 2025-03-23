@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/Midsem Course Target.md",
+                "file": "Personal_Notes/School/End Of Sem Course Target.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Midsem Course Target"
+              "title": "End Of Sem Course Target"
             }
           }
         ]
@@ -168,11 +168,10 @@
       "zk-prefixer:Create new unique note": false,
       "audio-recorder:Start/stop recording": false,
       "workspaces:Manage workspace layouts": false,
-      "obsidian-git:Open Git source control": false,
-      "voice:Voice": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7a57332c6ad1b1e1",
+  "active": "9f6dfc6fb26367d1",
   "lastOpenFiles": [
     "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
     "Contingency Theory.md",
@@ -196,7 +195,7 @@
     "Tags/weights.md",
     "Tags/backward chaining.md",
     "Tags/forward chaining.md",
-    "Personal_Notes/School/Midsem Course Target.md",
+    "Personal_Notes/School/End Of Sem Course Target.md",
     "Personal_Notes/Personal Timetable.md",
     "Courses/CSM_495/Lecture 6.md",
     "Courses/CSM_483",
