@@ -35,6 +35,11 @@
 - [ ] key system application in an organization
 - [ ] decision support in business
 - [ ] group decision support system
+- [ ] knowledge management systems
+- [ ] artificial intelligence 
+- [ ] other intelligent techniques
+- [ ] developing IS solutions
+- [ ] planning and managing information system technologies
 
 ## **GRAPH Theory**
 - [x] vertices and edges
@@ -55,9 +60,14 @@
 
 ## **Principles of management**
 - [x] introduction to management
+- [ ] history of management 
 - [ ] global management
 - [x] history of management
 - [ ] constraints and challenges of global managers
+- [ ] diverse workforce
+- [ ] foundation of organisational...
+- [ ] contemporary organisational...
+- [ ] leadership
 
 ## **Software Engineering**
 - [x] what is SE
