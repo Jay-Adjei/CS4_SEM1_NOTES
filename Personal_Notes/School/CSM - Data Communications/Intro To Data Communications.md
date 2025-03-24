@@ -744,6 +744,103 @@ Details on data encryption -> [[In depth data encryption]]
 ✔ Terrestrial radio links face interference, unlike satellite transmission.  
 ✔ Parabolic dish antennas ensure precise, high-directional transmission.
 
+### **Satellite Communication** 
+
+#### **Definition:**
+
+**Satellite Communication:** A microwave relay system used for point-to-point and broadcast transmission via satellites.  
+**RF Propagation:** The way radio waves travel through space, categorized into Ground Wave, Ionospheric, and Line-of-Sight (LOS).
+
+---
+
+#### **Function:**
+
+**Satellite Communication:**
+
+- Uplink frequency (1–10 GHz) transmits from Earth to satellite.
+    
+- Downlink retransmits to receiving stations.
+    
+- Ideal for broadcasting over wide areas.
+    
+
+**RF Propagation:**
+
+- **Ground Wave:** Follows Earth's curvature (≤2 MHz).
+    
+- **Ionospheric:** Reflects off ionosphere (30–85 MHz); affected by time and weather.
+    
+- **Line-of-Sight (LOS):** Requires direct visual path; limited by Earth’s curve (used in FM, microwave, satellite).
+    
+
+---
+
+#### **Transmission Path & Frequency:**
+
+**Satellite Communication:**
+
+- Uses higher frequencies, though above 10 GHz causes attenuation.
+    
+- High gain dish aerials required.
+    
+
+**RF Propagation:**
+
+- Ground Wave: AM radio.
+    
+- Ionospheric: Double hop; reflects signals back to Earth.
+    
+- LOS: Used in FM, satellite; affected by curvature.
+    
+
+---
+
+#### **Challenges:**
+
+**Satellite Communication:**
+
+- High launch cost and power requirements.
+    
+- Signal delay (240–300 ms).
+    
+- [[Doppler shift]] affects frequency.
+    
+- Signal distortion in telephone/digital communication.
+    
+
+**RF Propagation:**
+
+- **Ground Wave:** Limited by frequency and terrain.
+    
+- **Ionospheric:** Variable based on ionosphere conditions.
+    
+- **LOS:** Limited range (up to 100 km), affected by obstacles and reflection.
+    
+
+---
+
+#### **Example:**
+
+**Satellite Communication:** Used for broadcast TV, internet via satellite, etc.  
+**RF Propagation:**
+
+- **Ground Wave:** AM radio
+    
+- **Ionospheric:** Long-distance HF radio
+    
+- **LOS:** FM radio, satellite, microwave links
+    
+
+---
+
+### **Final Takeaways**
+
+✔ Satellite communication acts like a microwave relay, using uplink and downlink signals.  
+✔ RF propagation includes ground wave, ionospheric, and LOS methods, each with specific frequency ranges.  
+✔ Satellite communication enables wide coverage but has higher costs and delays.  
+✔ RF propagation is effective for specific ranges but is affected by geography and atmospheric conditions.  
+✔ All methods play essential roles in long- and short-range communication systems.
+
 ## Key Points
 - **Rule:** The maximum permissible transmission rate of  a message is directly proportional to signal power and inversely proportional to channel noise.
 - **Aim:** Provide the highest possible transmission rate at the lowest possible power with the least possible noise.
