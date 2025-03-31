@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
+                "file": "Personal_Notes/School/CSM 483 - Operating Systems/Deadlocks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Intro To Data Communications"
+              "title": "Deadlocks"
             }
           }
         ],
@@ -228,8 +228,13 @@
   },
   "active": "41c8e1dda8a15df8",
   "lastOpenFiles": [
-    "Tags/Doppler shift.md",
+    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
+    "Personal_Notes/School/CSM 483 - Operating Systems/Deadlocks.md",
+    "Attachments/Pasted image 20250331105753.png",
+    "Attachments/Pasted image 20250331105735.png",
+    "Tags/Semaphores.md",
     "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
+    "Tags/Doppler shift.md",
     "Personal_Notes/School/End Of Sem Course Target.md",
     "Personal_Notes/School/Midsem Timetable.md",
     "Tags/EIA232.md",
@@ -241,7 +246,6 @@
     "Tags/Biphase Manchester Coding.md",
     "Tags/Non-Return-to-Zero (NRZ).md",
     "Tags/latches.md",
-    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
     "Personal_Notes/School/CSM 481 - Information Systems/System Concepts.md",
     "Tags/Basic Components.md",
     "Tags/Deterministic and Probabilistic.md",
@@ -251,9 +255,6 @@
     "Tags/Conceptual & Physical system.md",
     "Tags/Interface.md",
     "Tags/Subsystem.md",
-    "Tags/Interaction and Structure.md",
-    "essence.md",
-    "Tags/Continuous vs Discrete systems.md",
     "Personal_Notes/School/CSM 483 - Operating Systems/Untitled",
     "Attachments/c program.png",
     "Attachments/process in memory.png",
@@ -264,8 +265,6 @@
     "Attachments/clustered systems.png",
     "Attachments/computing environments - virtualization.png",
     "Attachments/symmetric multiprocessing architecture.png",
-    "Attachments/NUMA.png",
-    "Attachments/Dual-Core Design.png",
     "Personal_Notes/School/CSM 483 - Operating Systems",
     "Personal_Notes/School/CSM - Data Communications",
     "Downloads/CS4_SEM1_NOTES",
