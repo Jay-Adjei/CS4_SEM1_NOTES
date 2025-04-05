@@ -1,0 +1,1 @@
+Amplitude Modulation (AM) is a technique in which the amplitude of a carrier wave is varied in proportion to the message signal while keeping the frequency and phase constant. It is widely used in radio broadcasting but is susceptible to noise and interference.

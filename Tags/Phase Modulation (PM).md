@@ -1,0 +1,1 @@
+Phase Modulation (PM) is a modulation technique where the phase of the carrier wave is varied according to the amplitude of the message signal. PM is closely related to Frequency Modulation (FM) and is used in communication systems like digital signal processing and telemetry.

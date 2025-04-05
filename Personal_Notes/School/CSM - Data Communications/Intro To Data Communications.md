@@ -5,7 +5,7 @@ tags:
 last topic: Optical Fibre
 next topic: Radio Transmission
 note to self: Try and cover the radio and satelite transmissions
-status: Incomplete
+status: Completed
 ---
 
 2025-02-09 20:25
@@ -841,11 +841,1054 @@ Details on data encryption -> [[In depth data encryption]]
 ✔ RF propagation is effective for specific ranges but is affected by geography and atmospheric conditions.  
 ✔ All methods play essential roles in long- and short-range communication systems.
 
-## Key Points
+---
+
+## **Microwave Communication vs Satellite Communication**
+
+### **Definition**:
+
+**Microwave Communication:** A form of **line-of-sight** wireless transmission using high-frequency radio waves.  
+**Satellite Communication:** Uses **geostationary or low Earth orbit (LEO) satellites** as relay stations to transmit and receive signals over long distances.
+
+---
+
+### **Frequency Range:**
+
+**Microwave Communication:** Operates between **3 to 10 GHz**.  
+**Satellite Communication:** Operates typically between **1 to 10 GHz**.
+
+---
+
+### **Signal Path:**
+
+**Microwave Communication:**
+
+- Requires direct visibility between transmitter and receiver.
+    
+- Curvature of Earth limits range (~50 km); uses **repeaters** to extend.
+    
+
+**Satellite Communication:**
+
+- Signals are sent from ground (uplink) to satellite and then back (downlink).
+    
+- Covers very large areas due to satellite altitude (e.g., 36,000 km in geostationary orbit).
+    
+
+---
+
+### **Components:**
+
+**Microwave:**
+
+- Transmitter, Receiver, and Repeater stations.
+    
+
+**Satellite:**
+
+- **Uplink** (transmits data to satellite),
+    
+- **Downlink** (receives data from satellite),
+    
+- **Transponders** (relay signals on different frequencies),
+    
+- **Footprint** (area on Earth where signals can be received).
+    
+
+---
+
+### **Advantages:**
+
+**Microwave Communication:**  
+✔ No land ownership between towers required.  
+✔ High bandwidth; small antennas due to short wavelengths.  
+✔ Low land cost for tower setup.
+
+**Satellite Communication:**  
+✔ Wide-area coverage.  
+✔ Ideal for broadcasting, GPS, and global communication.  
+✔ LEO satellites (like Iridium) reduce delay and power needs.
+
+---
+
+### **Disadvantages:**
+
+**Microwave Communication:**  
+✘ Signal blocked by solid objects (e.g., birds, buildings, fog).  
+✘ Affected by reflection, diffraction, and atmospheric refraction.  
+✘ Limited range without repeaters.
+
+**Satellite Communication:**  
+✘ Expensive to launch and maintain.  
+✘ Signal delay due to distance (especially geostationary).  
+✘ Frequency shift due to Doppler effect in LEO systems.
+
+---
+
+### **Examples:**
+
+**Microwave:** Point-to-point communication, TV relays, mobile phone backhaul.  
+**Satellite:** Satellite TV, GPS, satellite internet, Iridium telecom system.
+
+---
+
+### **Final Takeaways**
+
+✔ **Microwave** is short-range, line-of-sight, high-frequency communication best for local hops.  
+✔ **Satellite** offers long-range global communication with uplink/downlink paths.  
+✔ Microwaves use **repeaters**, while satellites use **transponders** in orbit.  
+✔ Both are key technologies for modern telecommunication networks.
+
+---
+
+## **Types of Transmission Impairments**
+
+### 1. **Attenuation**
+
+**Definition:** The gradual loss of signal strength over distance.  
+**Cause:**
+
+- In hardware: signal weakens logarithmically over distance (measured in decibels).
+    
+- In software or terrestrial systems: affected by atmospheric conditions and square of distance.  
+    **Solution:**
+    
+- Use of **amplifiers** (for analog) or **repeaters** (for digital) to boost signal.  
+    **Note:** Attenuation is frequency-dependent; different frequencies may attenuate at different rates.
+    
+
+---
+
+### 2. **Distortion**
+
+**Definition:** Changes in the signal form or shape.  
+**Cause:**
+
+- More severe in analog systems.
+    
+- Results from unequal delay in signal components (frequency/phase distortion).  
+  
+**Solution:**
+
+- Use of **equalization techniques**, **filters**, and **loading coils**.
+    **Problem:** May lead to **data loss**, especially in digital transmission.
+    
+
+---
+
+### 3. **Delay Distortion**
+
+**Definition:** Type of distortion caused by varying propagation speeds for different frequencies.  
+**Effect:**
+
+- Leads to **inter-symbol interference**, where signals of adjacent bits overlap.
+    
+- Serious in **high-speed data** communication.
+    
+
+---
+
+### **4. Noise**
+
+**Definition:**  
+Unwanted or interfering electrical signals that distort or corrupt the intended data during transmission. Noise reduces the accuracy and reliability of communication.
+
+#### **Types of Noise:**
+
+1. **Thermal Noise (Johnson–Nyquist Noise):**
+    
+
+- Caused by the **random motion of electrons** in conductors due to temperature.
+    
+- Present in **all electronic devices** and transmission media.
+    
+- Has a **uniformly wide frequency spectrum** (also called white noise).
+    
+- Although it cannot be completely eliminated, its level is usually very **low** (e.g., ~100 dB selective to 1 mW in MHz range).
+    
+- **Impact:** Represents the **upper limit** of system performance but is generally negligible in most applications.
+    
+
+2. **Gaussian Noise:**
+    
+
+- Appears as a **background hiss**, especially in analog telephone networks (PSTN).
+    
+- Produced in systems that **include amplifiers**.
+    
+- Characterized by a **zero average (DC) value** and a **Gaussian amplitude distribution**.
+    
+- **Impact:** Randomly alters signals; when above threshold, it can **convert correct signals into incorrect ones**.
+    
+
+**3. Jitter Noise (Phase Jitter):**
+
+- Caused by **short-term variations** or **departures in the timing** of signal pulses from their expected positions.
+    
+- Known as **phase jitter** when this time variation affects the signal's phase.
+    
+- Behaves like **phase shift noise**, additive to the original signal.
+    
+- **Sources:**
+    
+    - Mostly occurs during **digital regeneration** in repeaters spaced along the medium.
+        
+    - Often influenced by the **pattern** of the transmitted signal, called **pattern-dependent jitter**.
+        
+- **Measurement:**
+    
+    - Quantified using **r.m.s (root mean square)** value.
+        
+    - Depends on:
+        
+        - Number of repeaters (**N**),
+            
+        - Bandwidth (**B**),
+            
+        - Power density of jitter at each repeater (**P**).
+            
+    - Formula:
+        
+        ![[Pasted image 20250402045024.png]]
+- **Impact:** Jitter accumulates as the signal passes through each repeater, increasing error rates in digital transmission.
+    
+
+4. **Impulse Noise:**
+    
+
+- Consists of **high amplitude**, **short-duration** bursts or spikes.
+    
+- Often caused by external sources like **ignition systems** (cars), **lightning**, or **switching** equipment.
+    
+- Can affect **many consecutive bits** and may **corrupt or destroy an entire transmission frame**.
+    
+- **Impact:** Frames must be **retransmitted**, adding delays and decreasing efficiency.
+    
+
+#### **Other Noise Sources:**
+
+- **Intermodulation Noise:**
+    
+    - Occurs when signals of **different frequencies** mix in a **nonlinear component**, such as a **non-linear amplifier**.
+        
+    - The result is the generation of **additional frequencies**, which interfere with the original signals.
+        
+    - Common in shared media like carrier systems.
+        
+- **Crosstalk:**
+    
+    - Caused by **electrical coupling** between **adjacent conductors** (e.g., cables placed too close).
+        
+    - The signal from one line **“leaks”** into another, creating interference.
+        
+    - Common in **telephone lines**, twisted pair cables, and dense circuit boards.
+    
+
+---
+
+### **Signal-to-Noise Ratio (SNR)**
+
+**Definition:** Measure of signal quality compared to background noise.  
+**Formula:**
+
+![[Pasted image 20250402044550.png]]
+
+**Importance:** Higher SNR → better quality & higher possible data rate.
+
+---
+
+### Final Takeaways
+
+✔ **Attenuation** reduces signal strength with distance.  
+✔ **Distortion** changes signal form, especially in analog systems.  
+✔ **Delay distortion** affects pulse timing and causes data overlap.  
+✔ **Noise** comes in various forms and can corrupt data.  
+✔ Noise distorts or corrupts data signals and limits system performance.  
+✔ **Thermal** and **Gaussian** noise are continuous and system-based.  
+✔ **Impulse** and **jitter** are sudden and damaging in nature.  
+✔ **Jitter noise**, especially in digital systems, increases with each repeater and depends on timing patterns.  
+✔ **Intermodulation** and **crosstalk** are due to system design issues.  
+✔ Understanding all types of noise is critical for designing effective error control, shielding, and transmission systems.
+✔ **SNR** is key for evaluating transmission performance.  
+✔ Repeaters, filters, and amplifiers help mitigate these issues.
+
+---
+
+## **Public Switched Telephone Network (PSTN)**
+
+#### **Definition:**  
+A global system of interconnected voice-oriented public telephone networks.
+
+#### **Signal Handling:**
+
+- Analog speech/data signals are transmitted in the **300–400 Hz** bandwidth up to the **local exchange**.
+    
+- At the exchange, **multiple channels are combined** for wideband transmission via **modulation**.
+    
+
+#### **Modulation Process:**
+
+- Modifies a **carrier signal** using parameters of the **message signal**.
+    
+- Allows efficient use of bandwidth and sharing of frequencies among multiple users.
+    
+
+#### **Benefits of Modulation in PSTN:**
+
+- Prevents multiple speech signals from overlapping in the **same frequency range**.
+    
+- Enables **long-distance** and **multi-channel** communication over a single channel.
+    
+
+#### **Modulation Techniques Used:**
+
+- **[[Amplitude Modulation (AM)]]**
+    
+- **[[Frequency Modulation (FM)]]**
+    
+- **[[Phase Modulation (PM)]]**
+    
+- **[[Pulse Code Modulation (PCM)]]**
+    
+- **[[Multiplexing]]**
+    
+
+---
+
+### **Modem Categories**
+
+#### **Function:**  
+Converts **digital data** to **analog signals** (modulation) and vice versa (demodulation) for PSTN transmission.
+
+#### **Speed Categories & Techniques:**
+
+1. **Low-Speed (≤300 bps):**
+    
+    - Uses **Frequency Shift Keying (FSK)**
+        
+2. **Medium-Speed (≤1200 bps):**
+    
+    - Uses **Differentiated Phase Shift Keying (DPSK)**
+        
+3. **High-Speed (≥2400 bps):**
+    
+    - Uses **Quadrature Amplitude Modulation (QAM)**
+        
+
+---
+
+### **Data Ratios**
+
+#### **Telephone System Data Rates:**
+
+- Follows pattern: **75 × 2ⁿ**
+    
+    - e.g., 75, 150, 300, ..., 9600 bps.
+        
+
+#### **Computer Network Transmission Rates:**
+
+- Based on multiples/submultiples of **64 kbps** (e.g., **ISDN**).
+    
+
+#### **Error Control Techniques in Modems:**
+
+1. **ARQ (Automatic Repeat Request):**
+    
+    - Uses a **buffer** to hold data until it is acknowledged or retransmission is requested.
+        
+    - Ensures **no data loss** before validation.
+        
+2. **Forward Error Correction (FEC):**
+    
+    - Used in **fast modems (9600–19200 bps)**
+        
+    - Adds **redundant bits** to detect and correct errors.
+        
+
+---
+
+### **Baseband Modems**
+
+#### **Definition:**  
+Devices that transmit **unmodulated** digital signals over physical lines.
+
+#### **Operation:**
+
+- Filters digital signals to remove high-frequency content.
+    
+- Transmits directly over the medium **without modulation**.
+    
+- Suitable for **short distances** but supports **data rates up to 192 kbps**.
+    
+
+---
+
+### **Codec (Coder/Decoder)**
+
+#### **Function:**  
+Converts **analog signals** into **digital form** for storage and transmission, and back to analog at the receiver.
+
+#### **Process:**
+
+1. Analog → Digital:
+    
+    - Signal is **quantized** into an equivalent **bit stream**.
+        
+2. Digital → Analog:
+    
+    - The **bit stream is decoded** back to an analog signal.
+        
+
+#### **Challenges:**
+
+- Repeated digital patterns can create **spectral peaks**, leading to interference.
+    
+
+**Solution – Scrambling:**
+
+- The **bit stream is randomized** by:
+    
+    - **Reordering message digits**
+        
+    - Using a **multi-stage shift register** for encoding and decoding
+        
+
+---
+
+### Final Takeaways
+
+✔ PSTN uses modulation to efficiently transmit analog signals over long distances.  
+✔ Modems convert digital data into analog form and vice versa, categorized by speed and technique.  
+✔ Data error correction is vital in noisy environments: ARQ holds data; FEC adds redundant bits.  
+✔ Baseband modems avoid modulation, ideal for direct, short-range high-speed transmission.  
+✔ Codecs handle analog–digital conversion, using scrambling to prevent interference in adjacent channels.
+
+---
+
+## **The Modern Modem**
+
+### **Definition:**  
+A modern modem is a communication device that converts digitally coded information into a form suitable for transmission over telephone networks. It supports duplex operation—allowing data transmission in both directions simultaneously.
+
+### **Main Function:**
+
+- Enables two-way digital communication over traditional two-wire telephone lines.
+    
+- Performs more than just conversion—it includes features that improve speed, accuracy, and reliability.
+    
+
+### **Transmission Method:**
+
+- **For bit speeds up to 1200 bps**:  
+    Utilizes **Frequency Division Multiplexing (FDM)**—the full telephone bandwidth is divided for both transmission directions.
+    
+
+### **Additional Features:**
+
+- **Echo Cancellation**: Adaptive circuits in each receiver cancel self-interference and echoes.
+    
+- **Equalization Filters**: Minimize distortion from the transmission medium.
+    
+- **Data Compression & Expansion**: Enhance efficiency and reduce required bandwidth.
+    
+- **Automatic Answering Facilities**: Allow unattended connections.
+    
+- **Bit Rate Switching & Speed Recognition**: Adjusts automatically based on connection speed.
+    
+- **Frequency-Agile Modems**: Automatically change frequencies for optimal performance.
+    
+- **Facsimile Support**: Enables fax machine connectivity.
+    
+- **Microprocessor Integration**: All enhancements are coordinated by an internal microprocessor.
+
+---
+
+**Final Takeaways**  
+✔ The modern modem is more than a converter—it manages duplex communication and includes enhancements for speed and quality.  
+✔ It uses **frequency division multiplexing** for efficient use of bandwidth.  
+✔ Echo cancellation and equalization improve signal clarity.  
+✔ Additional features like compression, auto-answer, and adaptive speed make it robust for various communication needs.  
+✔ All functionality is powered by an internal **microprocessor**, enabling smarter transmission.
+
+---
+## **Difference Between Multiplexing, Concentration, Grooming, and Consolidation**
+
+#### **Definition**:
+
+- **Multiplexing**: A method used to combine multiple signals or data streams into one for efficient transmission over a shared medium.
+    
+- **Concentration**: Uses a concentrator to process and compress data streams from multiple sources before combining.
+    
+- **Grooming**: Groups mixed digital signals (like speech, video, data) and separates them into uniform output streams.
+    
+- **Consolidation**: Combines valid data from multiple input channels into one by removing empty packets.
+    
+
+#### **Function**:
+
+- **Multiplexing**: Shares bandwidth/time between devices to reduce cost and optimize usage.
+    
+- **Concentration**: Compresses data by eliminating redundancy and expands it back at the destination.
+    
+- **Grooming**: Organizes and filters different signal types into unified output channels.
+    
+- **Consolidation**: Reassembles meaningful data from various channels into a single, continuous data stream.
+    
+
+#### **Technique**:
+
+- **Multiplexing**: Can be done via software (compute network) or hardware (multiplexing units).
+    
+- **Concentration**: Performs data processing like blank space removal and code compression.
+    
+- **Grooming**: Sorts and separates different signal types within digital packets.
+    
+- **Consolidation**: Tracks and logs which packets are removed for accurate reconstruction.
+    
+
+#### **Data Output:**
+
+- **Multiplexing**: Combined signal preserving individual data integrity.
+    
+- **Concentration**: Compressed version of the original data with space removed.
+    
+- **Grooming**: Stream of one type of media (e.g., all audio, all video).
+    
+- **Consolidation**: A refined, complete data stream with minimal redundancy.
+    
+
+---
+
+### **Comparison Between FDM, TDM, and CDM (Types of Multiplexing)**
+
+#### **Definition**:
+
+- **FDM (Frequency Division Multiplexing)**: Divides bandwidth into separate frequency bands.
+    
+- **TDM (Time Division Multiplexing)**: Allocates time slots to each data stream on a shared channel.
+    
+- **CDM (Code Division Multiplexing)**: Assigns a unique code to each data stream for simultaneous transmission.
+    
+
+#### **Function**:
+
+- **FDM**: Shares a line by separating signals by frequency.
+    
+- **TDM**: Shares time on the same channel.
+    
+- **CDM**: Shares both time and frequency using code-based differentiation.
+    
+
+#### **Usage**:
+
+- **FDM**: Common in broadband and analog systems.
+    
+- **TDM**: Suitable for digital systems like TV and radio.
+    
+- **CDM**: Secure communication, originally used by the military.
+    
+
+#### **Signal Handling:**
+
+- **FDM**: Each signal has its frequency band.
+    
+- **TDM**: Each signal transmits in assigned time slots.
+    
+- **CDM**: All signals occupy the same spectrum but are separated by codes.
+    
+
+#### **Security:**
+
+- **FDM & TDM**: Basic multiplexing, less secure.
+    
+- **CDM**: Encrypted, uses pseudo-random codes.
+    
+
+---
+
+### **Broadband Transmission Solutions**
+
+#### **Problem:**
+
+- **Shared Frequency Issue**: Transmitting and receiving frequencies must differ, modems need to switch roles.
+    
+
+#### **Solution 1: Frequency-Agile Modems**
+
+- **Function**: Switch operating frequencies via signals from a central controller.
+    
+
+#### **Solution 2: Headened Device**
+
+- **Function**: Translates frequencies for reception so modems can use fixed frequencies.
+    
+
+---
+
+### **Final Takeaways**
+
+✔ **Multiplexing** allows multiple data streams to share a single channel.  
+✔ **Concentrators** compress data by removing redundancies and blank spaces.  
+✔ **Grooming** cleans up mixed signals and sorts them into distinct media streams.  
+✔ **Consolidation** creates a single clean data stream from multiple input channels.  
+✔ **FDM** splits bandwidth by frequency, **TDM** by time slots, **CDM** by codes.  
+✔ **CDM** provides encrypted, interference-resistant transmission.  
+✔ **Broadband systems** require smart modem coordination—via agile modems or a headened device.
+
+---
+
+## **Difference Between Baseband Signaling and Broadband Signaling**
+
+### **Definition:**
+
+- **Baseband Signaling**: Transmits digital data over the entire capacity of a medium using a single 0 or 1 bit at a time.
+    
+- **Broadband Signaling**: Uses modulation techniques to carry multiple signals over different frequency bands.
+    
+
+### **Application:**
+
+- **Baseband**: Used in point-to-point connections and TDM systems.
+    
+- **Broadband**: Used for FDM-based systems and long-distance or high-capacity communication.
+    
+
+### **Signal Handling:**
+
+- **Baseband**: Only one digital signal at a time on the transmission line.
+    
+- **Broadband**: Multiple signals coexist simultaneously via different frequencies.
+    
+
+### **Limitation:**
+
+- **Baseband**: Transmission fails if two devices send data simultaneously.
+    
+- **Broadband**: Requires frequency coordination but supports parallel communication.
+    
+
+---
+
+## **Comparison Between Synchronous TDM and Statistical TDM**
+
+### **Definition:**
+
+- **Synchronous TDM**: Allocates fixed time slots to each channel in a rotating, predictable sequence.
+    
+- **Statistical TDM**: Dynamically assigns time slots only to active channels based on real-time data needs.
+    
+
+### **Efficiency:**
+
+- **Synchronous TDM**: Less efficient; time slots may be unused if a channel has no data.
+    
+- **Statistical TDM**: More efficient; avoids wastage by skipping inactive channels.
+    
+
+### **Bandwidth Usage:**
+
+- **Synchronous TDM**: Bandwidth is permanently divided, causing potential idle time.
+    
+- **Statistical TDM**: Bandwidth is shared flexibly based on demand.
+    
+
+### **Synchronization:**
+
+- **Synchronous TDM**: Requires tight synchronization between sender and receiver using synchronizing digits.
+    
+- **Statistical TDM**: Needs less rigid synchronization, as slot assignments vary.
+    
+
+---
+
+## **Baseband Signaling: Challenges and Considerations**
+
+### **Transmission Limitations:**
+
+- Only one device can transmit at a time.
+    
+- Simultaneous transmissions lead to data corruption.
+    
+
+### **Requirements:**
+
+- Precise timing and signal recognition are essential.
+    
+- Must identify data type and duration clearly.
+    
+
+### **Network Issues:**
+
+- LANs using baseband must handle transmission conflicts.
+    
+- Complex protocols are needed to detect and manage simultaneous attempts.
+    
+
+---
+
+## **Choice of Multiplexing Techniques**
+
+### **Techniques:**
+
+- **Bit-Interleave Multiplexers**: Each time slot holds 1 bit; used with synchronous sources.
+    
+- **Character-Interleave Multiplexers**: Suited for start-stop character-based systems.
+    
+
+### **Use Cases:**
+
+- **Bit-Interleave**: High-speed, low-latency environments like VDUs.
+    
+- **Character-Interleave**: Slower, asynchronous communication systems.
+    
+
+### **Additional Needs:**
+
+- Synchronous systems require time-slot synchronization.
+    
+- Channels must operate at the same speed for orderly rotation.
+    
+- Frames with synchronizing digits are used to maintain sequence integrity.
+    
+
+---
+
+### Final Takeaways
+
+✔ **Baseband signaling** uses the entire bandwidth for one signal at a time—simple but prone to data conflict.  
+✔ **Broadband signaling** enables multiple parallel signals using frequencies—efficient for high-capacity links.  
+✔ **Synchronous TDM** wastes bandwidth with fixed time slots, while **Statistical TDM** uses bandwidth on demand.  
+✔ Proper **multiplexing technique choice** depends on speed, synchronization, and whether bit or character data is being used.  
+✔ TDM systems must maintain timing and synchronization to prevent data loss.
+
+---
+
+## **Difference Between AM, FM, and PM Modulation Techniques**
+
+### **Definition:**
+
+- **AM (Amplitude Modulation)**: Varies the amplitude of the carrier wave to represent 1s and 0s.
+    
+- **FM (Frequency Modulation)**: Alters the frequency of the carrier to represent binary data.
+    
+- **PM (Phase Modulation)**: Changes the phase of the carrier to encode data.
+    
+
+### **How It Works:**
+
+- **AM**: A '1' is the presence of a signal for 3 cycles; '0' is no signal.
+    
+- **FM**: A '0' is the original frequency, '1' is a higher frequency (closer-spaced cycles).
+    
+- **PM**: A '1' changes the phase of the wave; '0' keeps the phase unchanged.
+    
+
+### **Carrier Signal Use:**
+
+- **AM**: Signal presence/absence indicates data.
+    
+- **FM**: Two different frequencies represent binary data.
+    
+- **PM**: Uses a single frequency; changes only phase at bit transitions.
+    
+
+### **Advantages:**
+
+- **AM**: Simple to design.
+    
+- **FM**: Immune to noise; signal is always present.
+    
+- **PM**: Only one frequency used; easy to detect carrier loss.
+    
+
+### **Disadvantages:**
+
+- **AM**: Noise easily affects amplitude; no signal = 0.
+    
+- **FM**: Needs 2 frequencies; circuit must detect both.
+    
+- **PM**: Complex circuit design for phase changes.
+    
+
+---
+
+## **Modulation Techniques in Modems**
+
+### **Common Modem Modulation Types:**
+
+- **FSK (Frequency Shift Keying)**: Frequency-based modulation for digital data.
+    
+- **QPSK (Quadrature Phase Shift Keying)**: Phase-based modulation with four phase states.
+    
+- **QAM (Quadrature Amplitude Modulation)**: Combines amplitude and phase changes for more data per signal.
+    
+
+### **Modern Use:**
+
+- Modems use combinations of FSK, QPSK, and QAM for higher data transfer rates (e.g., 14.4 Kbps+).
+    
+- Includes **compression** to optimize throughput.
+    
+
+---
+
+## **Comparison: Simplex, Half Duplex, and Full Duplex FSK**
+
+### **Frequency Shift Keying (FSK)**
+
+- Encodes digital data as different frequencies.
+    
+
+---
+
+### **Simplex / Half Duplex FSK:**
+
+- **Single carrier (1170 Hz)** used for one-way communication.
+    
+- **Mark (1)**: 1270 Hz; **Space (0)**: 1070 Hz.
+    
+- Used in simple modem systems.
+    
+
+---
+
+### **Full Duplex FSK:**
+
+- **1170 Hz** and **2125 Hz** carriers used.
+    
+- **Originate Modem**: Transmits at 1170 Hz, receives at 2125 Hz.
+    
+- **Answer Modem**: Transmits at 2125 Hz, receives at 1170 Hz.
+    
+- Allows simultaneous send/receive (2-way communication).
+    
+- **Limitation**: Only effective up to 300 baud.
+    
+
+---
+
+## **Why FSK Isn't Used for High-Speed Modems**
+
+### **Limitations:**
+
+- Higher speeds need more bandwidth.
+    
+- Frequency bands (Mark/Space) must be farther apart.
+    
+- Prevents **crosstalk** (interference).
+    
+- Present phone lines limit to **1200 baud** (Half Duplex).
+    
+
+---
+
+## **Final Takeaways**
+
+✔ **Modulation** transforms digital data into analog signals using AM, FM, or PM.  
+✔ **AM** is simple but noise-sensitive. **FM** is noise-resistant but requires more frequencies. **PM** uses one frequency but is circuit-heavy.  
+✔ **FSK**, **QPSK**, and **QAM** are common in modems.  
+✔ **FSK** enables both **Half Duplex** and **Full Duplex** transmission using distinct frequency pairs.  
+✔ Higher data rates need **more bandwidth**, limiting FSK for modern high-speed modems.
+
+---
+
+## **Difference Between FSK and QPSK Modulation**
+
+### **Definition:**
+
+- **FSK (Frequency Shift Keying)**: Modulates data by shifting between two distinct frequencies.
+    
+- **QPSK (Quadrature Phase Shift Keying)**: Modulates data by shifting the phase of the carrier signal using four distinct phase angles.
+    
+
+### **Encoding:**
+
+- **FSK**: Each frequency represents either a binary 1 or 0.
+    
+- **QPSK**: Each phase change encodes two bits of data using 4 unique phase shifts (Quad-level PSK).
+    
+
+### **Transmission:**
+
+- **FSK (Full Duplex)**:
+    
+    - Originate modem: 1170 Hz transmit, 2125 Hz receive.
+        
+    - Answer modem: 2125 Hz transmit, 1170 Hz receive.
+        
+- **QPSK**:
+    
+    - Originate modem: Transmits at 1200 Hz, receives on 2400 Hz.
+        
+    - Answer modem: Receives at 1200 Hz, transmits on 2400 Hz.
+        
+
+### **Baud Rate:**
+
+- **FSK**: Typically 300 baud.
+    
+- **QPSK**: Uses 600 baud with differential encoding.
+    
+
+### **Usage:**
+
+- **FSK**: Simplex/Half Duplex or low-speed Full Duplex.
+    
+- **QPSK**: Bell 212A, V.22 standards—1200 bps Full Duplex.
+    
+
+---
+
+## **What Is a Frame?**
+
+### **Definition:**
+
+- A **frame** is a group of binary digits, typically with added bits for control and checking.
+    
+
+### **Purpose:**
+
+- Enables reliable transmission by organizing data into **sequences** that are easy to manage and verify at the receiving end.
+    
+
+### **Techniques Involving Frames:**
+
+- Frames are fundamental in **modulation** and **multiplexing** techniques.
+    
+- Framing is essential for both **FDM** and **TDM** transmission systems.
+    
+- **Statistical TDM** allows variable-length frames for better bandwidth efficiency.
+    
+
+---
+
+## **Data Communication Over Telephone Networks**
+
+### **Key Concepts:**
+
+- **Modem** = **Modulator + Demodulator**
+    
+    - Modulates digital data to analog for transmission.
+        
+    - Demodulates received analog signal back into digital form.
+        
+
+### **Modes of Operation:**
+
+- **Duplex**: Both ends transmit and receive simultaneously.
+    
+- **Half Duplex**: Each end can send and receive, but not at the same time.
+    
+- **Simplex**: Data flows in only one direction.
+    
+
+### **Limitations of Early Modems:**
+
+- **300 bps Full Duplex** or **1200 bps Half Duplex** over PSTN lines.
+    
+- Limited by **bandwidth** and **signal quality** of analog telephone lines.
+    
+
+---
+
+## **Final Takeaways**
+
+✔ **QPSK** is more advanced than FSK, encoding more bits per symbol using phase shifts.  
+✔ **Frames** are essential data units used for structured transmission, allowing error-checking and synchronization.  
+✔ **Telephone networks** required modems to convert digital signals for analog transmission, using simplex, half duplex, or full duplex modes.  
+✔ **Early modem speeds** were limited due to the physical constraints of telephone lines.
+
+---
+
+## **Switching Techniques**
+
+### **Key Concepts:**
+
+- **Data Switching**: Movement of data from source to destination node through intermediary switching nodes.
+    
+
+---
+
+### **1. Circuit Switching (e.g., PSTN)**
+
+- **Dedicated Path** is established between source and destination **before** communication begins.
+    
+- Follows **3 Phases**:
+    
+    1. **Circuit Establishment**
+        
+    2. **Data Transfer**
+        
+    3. **Circuit Disconnection**
+        
+- **Set-up time** is required before data transmission.
+    
+- Suitable for **voice calls**, not optimal for bursty data.
+    
+- **Duplex communication** is typically used.
+    
+- Inefficient for short or idle communication, as resources remain allocated.
+    
+
+---
+
+### **2. Message Switching**
+
+- No dedicated path; messages are stored temporarily at intermediate nodes (**store and forward**).
+    
+- Each message carries **destination address**.
+    
+- Data is forwarded node by node until it reaches destination.
+    
+- **Slower than circuit switching**, but more efficient in bandwidth usage.
+    
+
+**Advantages**:
+
+- No need for continuous dedicated path.
+    
+- Efficient for long messages and asynchronous communication.
+    
+
+---
+
+### **3. Packet Switching**
+
+- Message is **divided into smaller packets** (few thousand bits).
+    
+- Each packet includes destination and sequence number.
+    
+- Uses **store and forward** like message switching, but more efficient.
+    
+- Allows interleaving packets from multiple sources.
+    
+- Basis for modern networks like the **Internet**.
+    
+
+**Advantages**:
+
+- **Low delay**, better bandwidth utilization.
+    
+- **Efficient memory usage** at nodes.
+    
+- Packets take independent paths → resilient to failure.
+    
+
+---
+
+## **Final Takeaways**
+
+✔ **Circuit Switching** sets a fixed path, ideal for continuous communication (like voice).  
+✔ **Message Switching** is flexible, stores full message at each node, but slower.  
+✔ **Packet Switching** is modern, faster, more efficient, and robust against failure.  
+✔ **Store and forward** is a common technique in both message and packet switching.
+
+## **Key Points**
 - **Rule:** The maximum permissible transmission rate of  a message is directly proportional to signal power and inversely proportional to channel noise.
 - **Aim:** Provide the highest possible transmission rate at the lowest possible power with the least possible noise.
 - Bit serial transmission is normally just called serial transmission and is the chosen communications method in many computer peripherals.
 
-## Summary
+## **Summary**
 
 -

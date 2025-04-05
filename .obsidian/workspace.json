@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal_Notes/School/CSM 483 - Operating Systems/Deadlocks.md",
+                "file": "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deadlocks"
+              "title": "Intro To Data Communications"
             }
           }
         ],
@@ -226,14 +226,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "41c8e1dda8a15df8",
+  "active": "9f5ef6bcaae76c77",
   "lastOpenFiles": [
-    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
+    "Tags/Phase Modulation (PM).md",
+    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
+    "Tags/Multiplexing.md",
+    "Tags/Pulse Code Modulation (PCM).md",
+    "Tags/Amplitude Modulation (AM).md",
+    "Tags/Frequency Modulation (FM).md",
+    "Attachments/Pasted image 20250402045024.png",
+    "Attachments/Pasted image 20250402044550.png",
     "Personal_Notes/School/CSM 483 - Operating Systems/Deadlocks.md",
+    "Personal_Notes/School/CSM 481 - Information Systems/Overview Of Information Systems.md",
     "Attachments/Pasted image 20250331105753.png",
     "Attachments/Pasted image 20250331105735.png",
     "Tags/Semaphores.md",
-    "Personal_Notes/School/CSM - Data Communications/Intro To Data Communications.md",
     "Tags/Doppler shift.md",
     "Personal_Notes/School/End Of Sem Course Target.md",
     "Personal_Notes/School/Midsem Timetable.md",
@@ -251,10 +258,6 @@
     "Tags/Deterministic and Probabilistic.md",
     "Tags/Black Box.md",
     "Tags/Dynamic vs Static systems.md",
-    "Tags/Goal.md",
-    "Tags/Conceptual & Physical system.md",
-    "Tags/Interface.md",
-    "Tags/Subsystem.md",
     "Personal_Notes/School/CSM 483 - Operating Systems/Untitled",
     "Attachments/c program.png",
     "Attachments/process in memory.png",
@@ -263,8 +266,6 @@
     "Attachments/developing an expert system.png",
     "Personal_Notes/School/CSM 497 - Expert Systems",
     "Attachments/clustered systems.png",
-    "Attachments/computing environments - virtualization.png",
-    "Attachments/symmetric multiprocessing architecture.png",
     "Personal_Notes/School/CSM 483 - Operating Systems",
     "Personal_Notes/School/CSM - Data Communications",
     "Downloads/CS4_SEM1_NOTES",

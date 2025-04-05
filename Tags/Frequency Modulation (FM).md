@@ -1,0 +1,1 @@
+Frequency Modulation (FM) is a method where the frequency of the carrier wave is varied in accordance with the amplitude of the message signal. FM provides better noise resistance compared to AM and is widely used in FM radio broadcasting and television sound transmission.

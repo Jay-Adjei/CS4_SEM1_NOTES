@@ -1,0 +1,1 @@
+Pulse Code Modulation (PCM) is a digital modulation technique in which an analog signal is sampled at regular intervals and quantized into a series of binary values. PCM is widely used in digital telephony, audio recording, and modern communication systems due to its high signal quality and resistance to noise.
