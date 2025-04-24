@@ -176,8 +176,8 @@ A pathway over which information can be conveyed.
 - **Parity bits** provide a **simple way to detect errors** in communication.
 - **Even/Odd parity** ensures that data integrity is maintained in basic transmission.
 - **Limitations:** Parity cannot fix errors and fails if multiple bits change.
-
-#### **Checksum**
+---
+### **Checksum**
 #### **What is a Checksum?**
 
 - A **checksum** is a calculated **numeric value added to data packets** for **error detection**.

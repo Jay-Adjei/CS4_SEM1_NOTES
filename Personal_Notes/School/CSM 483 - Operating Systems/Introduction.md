@@ -15,6 +15,8 @@ status: Completed
 ## Detailed Notes
 ### **What is an Operating system?**
 A program that acts as an intermediary between a user of a computer and the computer hardware.
+
+
 **Goals:** 
 - Use the computer hardware in an efficient manner.
 - Make the computer system convenient to use.
@@ -247,7 +249,7 @@ There are two ways to handle I/O operations:
         - **Kernel mode**: For OS-level code and privileged instructions.
 - **Mode Bit**:
     
-    - A **mode bit** provided by hardware identifies the current mode:
+    - A **mode bit** providezd by hardware identifies the current mode:
         - **User mode**: Mode bit is set to "user".
         - **Kernel mode**: Mode bit is set to "kernel".
     - Ensures users cannot manually switch to kernel mode.
@@ -315,7 +317,7 @@ There are two ways to handle I/O operations:
 ### **Migration of Data from Disk to Storage**
 - In multitasking environments, the system ensures the **most recent value** of data is used, no matter where it resides in the storage hierarchy (e.g., disk, memory, cache, or register).
 - **Cache coherency** is critical in multiprocessor systems to ensure all CPUs have the latest data in their caches.
-- Distributed systems face challenges with **multiple copies of data**, requiring advanced solutions (covered in Chapter 19).
+- Distributed systems face challenges with **multiple copies of data**, requiring advanced solutions
 
 ### **I/o Subsystem**
 - The I/O subsystem of the OS **abstracts hardware complexities** from users.
